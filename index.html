@@ -1,0 +1,4667 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost:5173/w/studio -->
+<html lang="ja" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">
+import RefreshRuntime from "/w/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="./pt_build_files/client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5173/w/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./pt_build_files/css" rel="stylesheet">
+    <title>Vite + React</title>
+  <style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/App.css">#root {
+  /*max-width: 1500px;*/
+  width: 100vw;
+  margin: 0 auto;
+  text-align: center;
+}
+html {
+    scroll-behavior: smooth;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+.container{
+  /*max-width: 1200px;*/
+  margin: 0 auto;
+  width: 100%;
+  background-color: white;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/headerStyle.scss">.headerWrap {
+  width: 100%;
+}
+.headerWrap .headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  height: 70px;
+  padding: 0 30px;
+}
+.headerWrap .headerTop img {
+  cursor: pointer;
+}
+.headerWrap .headerBot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  background: #F5F1EB;
+}
+.headerWrap .headerBot .itemMenu {
+  color: #635905;
+  font-size: 14px;
+  margin: 0 30px;
+}
+.headerWrap .headerBot .itemMenu a {
+  color: #635905;
+  text-decoration: none;
+}
+.headerWrap .menuDetailWrap {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  display: none;
+}
+.headerWrap .menuDetailWrap.active {
+  display: block;
+  animation-duration: 1s;
+  animation-name: openDetailWrap;
+  background: #555555;
+}
+.headerWrap .menuDetailWrap.hide {
+  animation-duration: 1s;
+  animation-name: closeDetailWrap;
+  background: transparent;
+}
+.headerWrap .menuDetail {
+  width: 414px;
+  height: 100vh;
+  background-image: linear-gradient(white, white, white, #F5F1EB, #F5F1EB, #F5F1EB);
+  position: fixed;
+  z-index: 10001;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all 1s;
+  border: 1px solid #707070;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.headerWrap .menuDetail.active {
+  transform: translateX(0);
+}
+.headerWrap .menuDetail .menuDetailTop .closeImage {
+  padding: 0 20px 0 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.headerWrap .menuDetail .menuDetailTop .closeImage a img {
+  height: 50px;
+}
+.headerWrap .menuDetail .menuDetailTop .tableMenu table {
+  width: 100%;
+}
+.headerWrap .menuDetail .menuDetailTop .tableMenu table tr td {
+  width: 50%;
+  border: 0.5px solid white;
+}
+.headerWrap .menuDetail .menuDetailTop .tableMenu table tr td .content {
+  width: 100%;
+  height: 52px;
+  background: #9A845B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerWrap .menuDetail .menuDetailTop .tableMenu table tr td .content a {
+  color: white;
+  font-size: 14px;
+}
+.headerWrap .menuDetail .menuDetailTop .listLanguage {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #635905;
+}
+.headerWrap .menuDetail .menuDetailTop .listLanguage .itemLange {
+  cursor: pointer;
+}
+.headerWrap .menuDetail .menuDetailTop .listLanguage .itemLange.active {
+  cursor: unset;
+}
+.headerWrap .menuDetail .menuDetailTop .listLanguage .active {
+  color: #ba333e;
+}
+.headerWrap .menuDetail .menuDetailTop .listLanguage .sep {
+  margin: 0 10px;
+}
+.headerWrap .menuDetail .menuDetailMid {
+  padding-top: 20px;
+  background: #f5f1eb;
+  border-top: 3px solid #9a845b;
+}
+.headerWrap .menuDetail .menuDetailMid .titleWrap .title {
+  font-size: 16px;
+  color: #ba333e;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.headerWrap .menuDetail .menuDetailMid .titleWrap .sub {
+  font-size: 14px;
+  color: #9a845b;
+}
+.headerWrap .menuDetail .menuDetailMid .itemContact {
+  margin: 20px 10px;
+}
+.headerWrap .menuDetail .menuDetailMid .itemContact .nameContact {
+  font-size: 16px;
+  color: #635905;
+}
+.headerWrap .menuDetail .menuDetailMid .itemContact .imageContact {
+  margin: 10px 0;
+}
+.headerWrap .menuDetail .menuDetailMid .itemContact .imageContact img {
+  margin: 0 10px;
+  border-radius: 50%;
+}
+.headerWrap .menuDetail .menuDetailMid .itemContact .imageContact .imgMain {
+  max-width: 89px;
+}
+.headerWrap .menuDetail .menuDetailMid .itemContact .buttonContact {
+  margin-bottom: 20px;
+}
+.headerWrap .menuDetail .menuDetailMid .itemContact .buttonContact .btnContact {
+  background: #FFFFFF;
+  margin: 0 auto;
+  color: #635905;
+  border: 1px solid #635905;
+  height: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  width: 150px;
+  cursor: pointer;
+}
+.headerWrap .menuDetail .menuDetailMid .itemContact .buttonContact .btnContact:hover {
+  background: #635905;
+  color: white;
+}
+.headerWrap .menuDetail .menuDetailMid .itemContact .desContact .title {
+  font-size: 16px;
+  color: #635905;
+  margin-bottom: 10px;
+}
+.headerWrap .menuDetail .menuDetailMid .itemContact .desContact .sub {
+  font-size: 10px;
+  color: #9a845b;
+}
+.headerWrap .menuDetail .menuDetailMid .itemContact.borderTop {
+  border-top: 1px solid rgba(154, 132, 91, 0.168627451);
+}
+.headerWrap .menuDetail .menuDetailBot {
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  padding: 10px 30px;
+  background: #9a845b;
+}
+.headerWrap .menuDetail .menuDetailBot .flex {
+  justify-content: center;
+}
+.headerWrap .menuDetail .menuDetailBot .flex .item {
+  color: white;
+  margin: 0 10px 10px 10px;
+}
+.headerWrap .menuDetail .headerChat {
+  background-color: #9A845B;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: white;
+}
+.headerWrap .menuDetail .headerChat img {
+  margin: 0 30px;
+}
+.headerWrap .menuDetail .contentChat {
+  padding: 30px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-anchor: auto !important;
+  max-height: calc(100vh - 50px);
+}
+.headerWrap .menuDetail .contentChat::-webkit-scrollbar {
+  width: 4px;
+}
+.headerWrap .menuDetail .contentChat::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+.headerWrap .menuDetail .contentChat::-webkit-scrollbar-thumb {
+  background: #c8b695;
+  border-radius: 2px;
+}
+.headerWrap .menuDetail .contentChat::-webkit-scrollbar-thumb:hover {
+  background: #9A845B;
+}
+.headerWrap .menuDetail .contentChat .itemChat {
+  width: 100%;
+  position: relative;
+  padding: 13px 20px;
+  text-align: left;
+  border-radius: 13px;
+}
+.headerWrap .menuDetail .contentChat .itemChat.isAdmin {
+  background-color: #9A845B;
+  color: white;
+  margin: 20px 0;
+}
+.headerWrap .menuDetail .contentChat .itemChat.isAdmin .arrLeft {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(-100%) translateY(-50%);
+}
+.headerWrap .menuDetail .contentChat .itemChat.isUser {
+  background-color: #E7E1D7;
+  color: red;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.headerWrap .menuDetail .contentChat .itemChat.isUser .arrRight {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%) translateX(100%);
+}
+.headerWrap .menuDetail .contentChat .itemChat.optionChat {
+  background-color: #E7E1D7;
+  color: black;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.headerWrap .menuDetail .contentChat .itemChat.optionChat img {
+  margin-right: 15px;
+}
+.headerWrap .chatDetail {
+  width: 414px;
+  height: 100vh;
+  background-image: linear-gradient(white, white, white, #F5F1EB, #F5F1EB, #F5F1EB);
+  position: fixed;
+  z-index: 10001;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 1s;
+  border: 1px solid #707070;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.headerWrap .chatDetail.active {
+  transform: translateX(0);
+}
+.headerWrap .chatDetail .headerChat {
+  background-color: #9A845B;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: white;
+}
+.headerWrap .chatDetail .headerChat img {
+  margin: 0 30px;
+}
+.headerWrap .chatDetail .contentChat {
+  padding: 30px;
+  overflow-y: auto;
+  max-height: calc(100vh - 50px);
+}
+.headerWrap .chatDetail .contentChat::-webkit-scrollbar {
+  width: 4px;
+}
+.headerWrap .chatDetail .contentChat::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+.headerWrap .chatDetail .contentChat::-webkit-scrollbar-thumb {
+  background: #c8b695;
+  border-radius: 2px;
+}
+.headerWrap .chatDetail .contentChat::-webkit-scrollbar-thumb:hover {
+  background: #9A845B;
+}
+.headerWrap .chatDetail .contentChat .itemChat {
+  width: 100%;
+  position: relative;
+  padding: 13px 20px;
+  text-align: left;
+  border-radius: 13px;
+}
+.headerWrap .chatDetail .contentChat .itemChat.isAdmin {
+  background-color: #9A845B;
+  color: white;
+  margin: 20px 0;
+}
+.headerWrap .chatDetail .contentChat .itemChat.isAdmin .arrLeft {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(-100%) translateY(-50%);
+}
+.headerWrap .chatDetail .contentChat .itemChat.isUser {
+  background-color: #E7E1D7;
+  color: red;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+}
+.headerWrap .chatDetail .contentChat .itemChat.isUser .arrRight {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%) translateX(100%);
+}
+.headerWrap .chatDetail .contentChat .itemChat.optionChat {
+  background-color: #E7E1D7;
+  color: black;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.headerWrap .chatDetail .contentChat .itemChat.optionChat img {
+  margin-right: 15px;
+}
+.headerWrap .iconChat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999999;
+  cursor: pointer;
+}
+.headerWrap .disable-link {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.headerWrap .disable-link a {
+  opacity: 0.25 !important;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+@keyframes closeDetailWrap {
+  0% {
+    background: #555555;
+  }
+  99% {
+    background: transparent;
+  }
+  100% {
+    display: none;
+  }
+}
+@keyframes openDetailWrap {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: #555555;
+  }
+}
+.mb {
+  display: none;
+}
+
+.reverse_btn {
+  height: 48px;
+  width: 100vw;
+  color: white !important;
+  text-align: center;
+  background-color: #ba333e;
+  position: fixed;
+  bottom: 0;
+  font-size: 16px;
+  left: 0;
+}
+.reverse_btn div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .mb {
+    display: block;
+  }
+  .pc {
+    display: none !important;
+  }
+  .headerWrap {
+    padding: 10px;
+  }
+  .headerWrap .iconChat {
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    z-index: 9999999;
+    cursor: pointer;
+  }
+  .headerWrap .headerTop {
+    flex-direction: row-reverse;
+    padding: 0;
+  }
+  .headerWrap .headerTop .buttonWrap {
+    display: none;
+  }
+  .headerWrap .headerBot {
+    display: none;
+  }
+  .headerWrap .menuDetail {
+    width: 100vw;
+  }
+  .headerWrap .menuDetail .menuDetailTop .closeImage {
+    padding: 10px;
+  }
+  .headerWrap .menuDetail .menuDetailTop .listLanguage {
+    margin: 15px 0;
+  }
+  .headerWrap .menuDetail .menuDetailMid .itemContact {
+    margin: 10px 20px;
+  }
+  .headerWrap .chatDetail {
+    width: 100vw;
+  }
+  .headerWrap .companyLogo {
+    font-size: 12px;
+    max-height: 25px;
+  }
+  .headerWrap .headerRight img {
+    max-height: 22px;
+  }
+  .headerWrap .headerRight .itemMenu {
+    font-size: 11px;
+    margin-left: 10px;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/buttonStyle.scss">.buttonWrap {
+  font-size: 16px;
+  width: 247px;
+  color: white;
+  border-radius: 10px;
+  background: #ba333e;
+  cursor: pointer;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+}
+.buttonWrap:hover {
+  color: #ba333e;
+  background: white;
+  border: 1px solid #ba333e;
+}
+.buttonWrap.type1 {
+  background: #e7e1d7;
+  color: #635905;
+  cursor: not-allowed;
+}
+.buttonWrap.type1:hover {
+  background: #e7e1d7;
+  color: #635905;
+  border: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .buttonWrap {
+    font-size: 11px;
+    padding: 5px 10px;
+    height: 30px;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/footerStyle.scss">.BeforeFooterWrap {
+  width: 100%;
+  margin-top: 80px;
+  padding: 80px;
+  background-color: #FCFCFC;
+}
+.BeforeFooterWrap .cardsContact {
+  padding: 0 190px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.BeforeFooterWrap .cardsContact .itemCardContact {
+  width: calc(50% - 40px);
+  margin: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.BeforeFooterWrap .cardsContact .itemCardContact:nth-of-type(2) {
+  justify-content: flex-start;
+}
+.BeforeFooterWrap .cardsContact .itemCardContact:nth-of-type(4) {
+  justify-content: flex-start;
+}
+.BeforeFooterWrap .listBtnBF {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+.BeforeFooterWrap .listBtnBF a {
+  position: relative;
+}
+.BeforeFooterWrap .listBtnBF a img {
+  margin: 25px;
+}
+.BeforeFooterWrap .listBtnBF a .content {
+  position: absolute;
+  width: calc(54.545% - 35px);
+  right: 55px;
+  top: 48px;
+}
+.BeforeFooterWrap .listBtnBF a .content div {
+  font-size: 12px;
+  color: #9a845b;
+  text-align: left;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+.BeforeFooterWrap .listBtnBF a .content div:first-of-type {
+  color: #d73567;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.contactWrap {
+  padding: 80px;
+  background: #E7E1D7;
+  border-top: 5px solid #9a845b;
+}
+.contactWrap .contactContent .titleWrap {
+  font-size: 18px;
+}
+.contactWrap .contactContent .titleWrap .title {
+  font-size: 18px;
+  color: #ba333e;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.contactWrap .contactContent .titleWrap .sub {
+  font-size: 16px;
+  color: #9a845b;
+}
+.contactWrap .contactContent .contactTop {
+  display: flex;
+  justify-content: center;
+}
+.contactWrap .contactContent .itemContact {
+  margin: 20px;
+}
+.contactWrap .contactContent .itemContact .nameContact {
+  font-size: 18px;
+  color: #635905;
+}
+.contactWrap .contactContent .itemContact .imageContact {
+  margin: 10px 0;
+}
+.contactWrap .contactContent .itemContact .imageContact img {
+  margin: 0 10px;
+}
+.contactWrap .contactContent .itemContact .imageContact .imgMain {
+  max-width: 98px;
+}
+.contactWrap .contactContent .itemContact .buttonContact .btnContact {
+  margin: 0 auto 22px auto;
+  color: #635905;
+  border: 1px solid #635905;
+  background: white;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  width: 224px;
+  cursor: pointer;
+}
+.contactWrap .contactContent .itemContact .buttonContact .btnContact:hover {
+  background: #635905;
+  color: white;
+}
+.contactWrap .contactContent .itemContact .desContact .title {
+  font-size: 18px;
+  color: #635905;
+  margin-bottom: 10px;
+}
+.contactWrap .contactContent .itemContact .desContact .sub {
+  font-size: 14px;
+  color: #9a845b;
+}
+
+.footerWrap {
+  width: 100%;
+  padding: 0 120px;
+  background-color: #9A845B;
+  position: relative;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerWrap .listMenuBot {
+  font-size: 14px;
+  display: flex;
+}
+.footerWrap .listMenuBot .itemMenuBot {
+  margin: 0 40px;
+  color: white;
+}
+.footerWrap .listMenuBot .itemMenuBot a {
+  color: white;
+}
+.footerWrap .textCopyRight {
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .BeforeFooterWrap {
+    margin-top: 30px;
+    padding: 50px 20px;
+  }
+  .BeforeFooterWrap .cardsContact {
+    padding: 0;
+  }
+  .BeforeFooterWrap .cardsContact .itemCardContact {
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+  .BeforeFooterWrap .listBtnBF {
+    margin-top: 0;
+    flex-direction: column;
+  }
+  .BeforeFooterWrap .listBtnBF img {
+    width: calc(100% - 50px);
+    margin: 30px auto auto auto;
+  }
+  .contactWrap {
+    padding: 30px 0;
+  }
+  .contactWrap .contactContent .contactTop {
+    flex-direction: column;
+  }
+  .contactWrap .contactContent .itemContact {
+    margin: 20px 0;
+  }
+  .footerWrap {
+    padding: 10px;
+    flex-direction: column;
+    height: 84px;
+    justify-content: space-evenly;
+  }
+  .footerWrap .listButton {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .footerWrap .listButton .itemButton {
+    margin-right: 10px;
+  }
+  .footerWrap .listButton .itemButton:last-of-type {
+    margin-right: 0;
+  }
+  .footerWrap .textCopyRight {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+    font-size: 12px;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/homePageStyle.scss">.homePageWrap {
+  width: 100%;
+}
+.homePageWrap .carouselWrap {
+  background: #9a845b;
+  width: 100%;
+}
+.homePageWrap .carouselWrap video {
+  width: 100%;
+}
+.homePageWrap .buttonAfterCarousel {
+  font-size: 16px;
+  width: 536px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: #9A845B;
+  border-radius: 10px;
+  margin: 50px auto;
+  cursor: pointer;
+}
+.homePageWrap .buttonAfterCarousel:hover {
+  color: #FFFFFF;
+  background: #635905;
+  border: 1px solid #635905;
+}
+.homePageWrap .carouselWrap2 {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  padding-top: calc(50vh + 66px);
+  background: #9a845b;
+}
+.homePageWrap .carouselWrap2 .carouselThin {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  margin: 0 auto;
+}
+.homePageWrap .carouselWrap2 .carouselThin .carousel-item {
+  padding: 0 15px;
+}
+.homePageWrap .carouselWrap2 .carouselThin .itemCarousel {
+  margin: 0 auto;
+  height: 50vh;
+  position: relative;
+}
+.homePageWrap .carouselWrap2 .carouselThin .itemCarousel .imageBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.homePageWrap .carouselWrap2 .carouselThin .itemCarousel .titleCarousel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  font-weight: bold;
+  font-size: 2.5rem;
+  white-space: nowrap;
+}
+.homePageWrap .carouselWrap2 .carouselThin .carousel-dots {
+  transform: none !important;
+}
+.homePageWrap .carouselWrap2 .carouselThin .carousel-dots button:before {
+  color: #ffffff;
+}
+.homePageWrap .carouselWrap2 .carouselThin .carousel-dots .carousel-dots-active button:before {
+  color: #635905 !important;
+}
+.homePageWrap .carouselWrap2 .buttonAfterCarousel {
+  background: white;
+  color: #9A845B;
+}
+.homePageWrap .carouselWrap2 .buttonAfterCarousel:hover {
+  color: #FFFFFF;
+  background: #635905;
+  border: 1px solid #635905;
+}
+.homePageWrap .special {
+  padding: 100px 140px;
+  background-image: linear-gradient(#ffffff, #fbfaf8, #e7e1d7, #e7e1d7, #e7e1d7);
+}
+.homePageWrap .special .title {
+  font-size: 32px;
+  color: #9A845B;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.homePageWrap .special .user {
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+.homePageWrap .special img {
+  width: 100%;
+}
+.homePageWrap .introduceWrap {
+  padding: 100px;
+  height: calc(100vh - 100px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homePageWrap .introduceWrap .imageBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.homePageWrap .videoBannerWrap {
+  width: 100%;
+}
+.homePageWrap .videoBannerWrap iframe {
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+.homePageWrap .descriptionWrap {
+  padding: 80px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #9a845b;
+  color: white;
+}
+.homePageWrap .descriptionWrap .des1 {
+  font-size: 16px;
+  margin: 30px 0 15px 0;
+  letter-spacing: 2px;
+}
+.homePageWrap .descriptionWrap .des2_sub {
+  font-size: 18px;
+  margin: 15px 0 30px 0;
+  letter-spacing: 2px;
+}
+.homePageWrap .descriptionWrap .des2 {
+  margin-bottom: 15px;
+  font-size: 32px;
+  color: white;
+  letter-spacing: 2px;
+}
+.homePageWrap .descriptionWrap .des3 {
+  width: 40%;
+}
+.homePageWrap .descriptionWrap .des3:last-of-type {
+  margin-top: 50px;
+}
+.homePageWrap .descriptionWrap .des3 img {
+  width: 100%;
+  max-width: 552px;
+  margin: 80px 0;
+}
+.homePageWrap .descriptionWrap .des4 {
+  padding: 30px 60px;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  width: max-content;
+  margin-bottom: 50px;
+}
+.homePageWrap .descriptionWrap .des4 .mask3 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.homePageWrap .descriptionWrap .des4 .mask4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.homePageWrap .descriptionWrap .des5 {
+  margin-bottom: 30px;
+}
+.homePageWrap .descriptionWrap .des5 .title {
+  font-size: 32px;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.homePageWrap .descriptionWrap .des5 .user {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.homePageWrap .descriptionWrap .des5 .poem {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 40px;
+}
+.homePageWrap .planeWrap {
+  width: 100%;
+  padding: 50px 139px;
+  background: #E7E1D7;
+}
+.homePageWrap .planeWrap .title {
+  font-size: 32px;
+  color: #635905;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.homePageWrap .planeWrap .user {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #635905;
+}
+.homePageWrap .planeWrap .cards {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  width: 100%;
+}
+.homePageWrap .planeWrap .cards .itemCard {
+  width: calc(33.3333333333% - 30px);
+}
+.homePageWrap .blanzWrap {
+  padding: 50px 130px;
+}
+.homePageWrap .blanzWrap .title {
+  font-size: 32px;
+  color: #9A845B;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.homePageWrap .blanzWrap .user {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.homePageWrap .blanzWrap .content {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.homePageWrap .blanzWrap .content .width50 {
+  width: 50%;
+}
+.homePageWrap .blanzWrap .content .width29 {
+  width: 29%;
+}
+.homePageWrap .blanzWrap .content .width21 {
+  width: 21%;
+}
+.homePageWrap .blanzWrap .content .width22 {
+  width: 22%;
+}
+.homePageWrap .blanzWrap .content .width38 {
+  width: 38%;
+}
+.homePageWrap .blanzWrap .content .width40 {
+  width: 40%;
+}
+.homePageWrap .conceptWrap {
+  padding: 80px;
+  background: #E7E1D7;
+}
+.homePageWrap .conceptWrap .title {
+  font-size: 32px;
+  color: #9A845B;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.homePageWrap .conceptWrap .user {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #635905;
+}
+.homePageWrap .conceptWrap .user_2 {
+  font-size: 14px;
+  margin-bottom: 50px;
+  color: #635905;
+}
+.homePageWrap .conceptWrap .movie {
+  width: 536px;
+  height: 170px;
+  margin: 0 auto;
+}
+.homePageWrap .conceptWrap .movie iframe {
+  width: 100%;
+  height: 100%;
+}
+.homePageWrap .conceptWrap .review {
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homePageWrap .conceptWrap .review .itemReview {
+  width: 33.333%;
+  margin: 0 10px;
+}
+.homePageWrap .conceptWrap .review .itemReview img {
+  width: 100%;
+}
+.homePageWrap .conceptWrap .review .itemReview .txt {
+  font-size: 14px;
+  color: #635905;
+  margin-top: 20px;
+  width: 100%;
+  text-align: left;
+}
+.homePageWrap .accessWrap {
+  padding: 80px 139px;
+}
+.homePageWrap .accessWrap .title {
+  font-size: 32px;
+  color: #9A845B;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.homePageWrap .accessWrap .user {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #635905;
+}
+.homePageWrap .accessWrap .user_2 {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #635905;
+}
+.homePageWrap .accessWrap .map {
+  width: 100%;
+}
+.homePageWrap .accessWrap .map iframe {
+  height: 300px;
+  width: 100%;
+}
+.homePageWrap .aboutWrap {
+  padding: 80px;
+}
+.homePageWrap .aboutWrap .title {
+  font-size: 32px;
+  color: #9A845B;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.homePageWrap .aboutWrap .user {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #635905;
+}
+.homePageWrap .cardsContact {
+  display: flex;
+  justify-content: center;
+}
+.homePageWrap .cardsContact .itemCardContact {
+  margin: 0 20px;
+}
+
+.carousel-dots {
+  transform: translateY(-200%);
+  position: relative;
+  z-index: 9999;
+}
+
+.buttonReverse {
+  width: 100vw;
+  margin-left: -20px;
+  height: 48px;
+  font-size: 16px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  background-color: #ba333e;
+}
+
+@media only screen and (max-width: 600px) {
+  .buttonReverse {
+    display: flex;
+    margin-left: 0;
+  }
+  .homePageWrap .special {
+    background-color: #E7E1D7;
+    padding: 50px 20px;
+  }
+  .homePageWrap .special .title {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  .homePageWrap .special .user {
+    font-size: 14px;
+  }
+  .homePageWrap .planeWrap {
+    background-color: #F5F1EB;
+    padding: 50px 20px;
+  }
+  .homePageWrap .planeWrap .title {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  .homePageWrap .planeWrap .user {
+    font-size: 14px;
+  }
+  .homePageWrap .planeWrap .cards {
+    flex-direction: column;
+  }
+  .homePageWrap .planeWrap .cards .itemCard {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .homePageWrap .blanzWrap {
+    background-color: white;
+    padding: 50px 20px;
+  }
+  .homePageWrap .blanzWrap .title {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  .homePageWrap .blanzWrap .user {
+    font-size: 14px;
+  }
+  .homePageWrap .blanzWrap .content .width50 {
+    width: 100%;
+  }
+  .homePageWrap .blanzWrap .content .width29 {
+    width: 58%;
+  }
+  .homePageWrap .blanzWrap .content .width21 {
+    width: 42%;
+  }
+  .homePageWrap .blanzWrap .content .width22 {
+    width: 42%;
+  }
+  .homePageWrap .blanzWrap .content .width38 {
+    width: 58%;
+  }
+  .homePageWrap .blanzWrap .content .width40 {
+    width: 100%;
+  }
+  .homePageWrap .conceptWrap {
+    background-color: #E7E1D7;
+    padding: 50px 20px;
+  }
+  .homePageWrap .conceptWrap .title {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  .homePageWrap .conceptWrap .user {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .homePageWrap .conceptWrap .user_2 {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  .homePageWrap .conceptWrap .movie {
+    width: 100%;
+    height: 120px;
+    margin: 0 auto;
+  }
+  .homePageWrap .conceptWrap .review {
+    padding: 0;
+    background-color: #E7E1D7;
+    flex-direction: column;
+  }
+  .homePageWrap .conceptWrap .review .itemReview {
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+  .homePageWrap .aboutWrap {
+    padding: 50px 20px;
+  }
+  .homePageWrap .aboutWrap .title {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  .homePageWrap .aboutWrap .user {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .homePageWrap .aboutWrap .user_2 {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  .homePageWrap .aboutWrap .cardsContact {
+    flex-direction: column;
+  }
+  .homePageWrap .aboutWrap .cardsContact .itemCardContact {
+    margin: 0 0 15px 0;
+  }
+  .homePageWrap .accessWrap {
+    padding: 50px 20px;
+  }
+  .homePageWrap .accessWrap .title {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  .homePageWrap .accessWrap .user {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .homePageWrap .accessWrap .user_2 {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .homePageWrap .accessWrap .map iframe {
+    height: 210px;
+  }
+  .homePageWrap .buttonAfterCarousel {
+    width: 308px;
+    height: 50px;
+    font-size: 14px;
+    margin: 30px auto;
+  }
+  .homePageWrap .carouselWrap .itemCarousel {
+    height: calc(50vh - 100px);
+  }
+  .homePageWrap .descriptionWrap .des1 {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .homePageWrap .descriptionWrap .des2_sub {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  .homePageWrap .descriptionWrap .des4 {
+    font-size: 14px;
+    padding: 20px 40px;
+  }
+  .homePageWrap .descriptionWrap .des5 .title {
+    font-size: 24px;
+  }
+  .homePageWrap .descriptionWrap .des5 .user {
+    font-size: 14px;
+  }
+  .homePageWrap .descriptionWrap .des5 .poem {
+    font-size: 14px;
+  }
+  .homePageWrap .carouselWrap2 {
+    padding-top: 150px;
+  }
+  .homePageWrap .carouselWrap2 .carouselThin .itemCarousel {
+    height: 137px;
+  }
+  .homePageWrap .carouselWrap2 .carouselThin .carousel-item {
+    padding: 0 5px;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/node_modules/infinite-react-carousel/lib/carousel/style.css">.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Carousel {
+  width: 100%;
+}
+
+.carousel-initialized {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-arrow.carousel-hidden {
+  display: none;
+}
+
+.carousel-track {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+/* Arrows */
+.carousel-prev.block,
+.carousel-next.block {
+  opacity: 1;
+}
+
+.carousel-prev,
+.carousel-next {
+  opacity: 0;
+  font-size: 0;
+  line-height: 0;
+  width: 40px;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+
+  color: transparent;
+  border: none;
+  outline: none;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  z-index: 4;
+  background: none;
+}
+
+.carousel-prev:hover,
+.carousel-prev:focus,
+.carousel-next:hover,
+.carousel-next:focus {
+  opacity: 1;
+  color: transparent;
+  outline: none;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.carousel-prev:hover:before,
+.carousel-prev:focus:before,
+.carousel-next:hover:before,
+.carousel-next:focus:before {
+  opacity: 1;
+}
+
+.carousel-prev.carousel-disabled:before,
+.carousel-next.carousel-disabled:before {
+  opacity: .25;
+}
+
+.carousel-prev:before,
+.carousel-next:before {
+  content: '';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.carousel-prev:before {
+  background-image: url("data:image/svg+xml,%3C!-- Generated by IcoMoon.io --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctitle%3Earrow-left2%3C/title%3E%3Cpath fill='%23900' d='M12.586 27.414l-10-10c-0.781-0.781-0.781-2.047 0-2.828l10-10c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-6.586 6.586h19.172c1.105 0 2 0.895 2 2s-0.895 2-2 2h-19.172l6.586 6.586c0.39 0.39 0.586 0.902 0.586 1.414s-0.195 1.024-0.586 1.414c-0.781 0.781-2.047 0.781-2.828 0z'%3E%3C/path%3E%3C/svg%3E%0A");
+}
+.carousel-next:before {
+  background-image: url("data:image/svg+xml,%3C!-- Generated by IcoMoon.io --%3E%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ctitle%3Earrow-right2%3C/title%3E%3Cpath fill='%23900' d='M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z'%3E%3C/path%3E%3C/svg%3E%0A");
+}
+
+.carousel-next.custom:before,
+.carousel-prev.custom:before {
+  content: unset;
+  background-image: unset;
+} 
+
+.carousel-prev {
+  left: 0px;
+}
+
+[dir='rtl'] .carousel-prev {
+  right: -25px;
+  left: auto;
+}
+
+[dir='rtl'] .carousel-prev:before {
+  content: '';
+}
+
+.carousel-next {
+  right: 0px;
+}
+
+[dir='rtl'] .carousel-next {
+  right: auto;
+  left: -25px;
+}
+
+[dir='rtl'] .carousel-next:before {
+  content: '';
+}
+
+/* Dots */
+.carousel-dots {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-top: 1em;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-dots li {
+  position: relative;
+
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+.carousel-dots li button {
+  font-size: 0;
+  line-height: 0;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.carousel-dots li button:hover,
+.carousel-dots li button:focus {
+  outline: none;
+}
+
+.carousel-dots li button:hover:before,
+.carousel-dots li button:focus:before {
+  opacity: 1;
+}
+
+.carousel-dots li button:before {
+  font-family: 'slick';
+  font-size: 40px;
+  line-height: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  content: '•';
+  text-align: center;
+
+  opacity: .25;
+  color: black;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.carousel-dots li.carousel-dots-active button:before {
+  opacity: .75;
+  color: black;
+}
+
+.Carousel .carousel-initialized.scrolling .CustomArrow {
+  display: none;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/Card.scss">.cardWrap {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+}
+.cardWrap .thumbnail {
+  width: 100%;
+  padding-bottom: 65%;
+  position: relative;
+  background: #9a845b;
+}
+.cardWrap .thumbnail .imgThumbnail {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cardWrap .thumbnail span {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.cardWrap .contentCard {
+  border: 0.1px solid rgba(169, 169, 169, 0.2392156863);
+  padding: 30px 10px;
+}
+.cardWrap .contentCard .titleCard {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #635905;
+  font-weight: 500;
+}
+.cardWrap .contentCard .descriptionCard {
+  font-size: 16px;
+  height: 70px;
+  color: #9A845B;
+}
+.cardWrap .contentCard .descriptionCard .itemDes {
+  margin: 0;
+}
+.cardWrap .contentCard .buttonCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .cardWrap .contentCard .titleCard {
+    margin-bottom: 10px;
+  }
+  .cardWrap .contentCard .descriptionCard {
+    height: auto;
+  }
+  .cardWrap .contentCard .descriptionCard .itemDes {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/CardContact.scss">.cardWrapContact {
+  display: flex;
+  flex-direction: row;
+  width: 414px;
+}
+.cardWrapContact.horizone {
+  width: 212px;
+  flex-direction: column;
+}
+.cardWrapContact.horizone .thumbnail {
+  padding: 0 32px;
+  margin-bottom: 10px;
+}
+.cardWrapContact.horizone .thumbnail .imgThumbnail {
+  width: 100%;
+  border-radius: 50%;
+}
+.cardWrapContact .thumbnail {
+  padding: 0 32px;
+  margin-bottom: 10px;
+}
+.cardWrapContact .thumbnail .imgThumbnail {
+  border-radius: 50%;
+}
+.cardWrapContact .button1 {
+  cursor: pointer;
+  width: 212px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #9A845B;
+  background-image: url("src/assets/images/top/cardContainerButton.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.cardWrapContact .contentCard .descriptionCard {
+  font-size: 14px;
+  color: #9A845B;
+  text-align: left;
+  line-height: 20px;
+  margin: 10px;
+}
+.cardWrapContact .buttonCard {
+  width: 100%;
+  border-radius: 20px;
+  font-size: 12px;
+  height: 33px;
+  color: white;
+  background: #9A845B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.cardWrapContact .buttonCard:hover {
+  color: #9A845B;
+  background: white;
+  border: 1px solid #9A845B;
+}
+
+@media only screen and (max-width: 600px) {
+  .cardWrapContact {
+    width: 100%;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cardWrapContact.horizone {
+    width: 100%;
+  }
+  .cardWrapContact.horizone .thumbnail {
+    padding: 0;
+  }
+  .cardWrapContact .thumbnail {
+    width: 36%;
+    padding: 0;
+  }
+  .cardWrapContact .content {
+    width: 53%;
+  }
+  .cardWrapContact .button1 {
+    width: 100%;
+  }
+  .cardWrapContact .contentCard .descriptionCard {
+    font-size: 12px;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/companyProfileStyle.scss">.company-profile {
+  color: #9A845B;
+  max-width: 904px;
+  margin: 0 auto;
+  font-size: 12px;
+}
+.company-profile .title {
+  font-size: 32px;
+  margin: 60px 0;
+}
+.company-profile .line {
+  margin: 20px 0;
+  width: 100%;
+  height: 1px;
+  background: #F5F1EB;
+}
+.company-profile .name {
+  width: 92px;
+}
+.company-profile .next {
+  font-weight: 900;
+  margin-top: 60px;
+  color: #FF0015;
+}
+
+.flex {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .company-profile {
+    max-width: 372px;
+  }
+  .company-profile .title {
+    font-size: 20px;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/serviceIntroductionStyle.scss">.service-introduction {
+  font-weight: bold;
+}
+.service-introduction .main-content {
+  display: flex;
+  justify-content: space-between;
+}
+.service-introduction .main-content .img-content {
+  width: 49%;
+  height: 580px;
+  position: relative;
+}
+.service-introduction .main-content .img-content .imageBg {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+  z-index: 0;
+}
+.service-introduction .main-content .img-content .title-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  font-weight: bold;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  text-decoration: underline;
+}
+.service-introduction .title {
+  display: flex;
+  justify-content: center;
+}
+.service-introduction .title .title-content {
+  width: fit-content;
+  border-top: 6px solid #000;
+  padding-top: 30px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  text-decoration: underline;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.service-introduction .carouselWrap {
+  width: 100%;
+}
+.service-introduction .carouselWrap .itemCarousel {
+  width: 100%;
+  height: calc(100vh - 100px);
+  position: relative;
+}
+.service-introduction .carouselWrap .itemCarousel .imageBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.service-introduction .carouselWrap .itemCarousel .titleCarousel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.service-introduction .carouselWrap .itemCarousel .titleCarousel .titleCarousel-child {
+  font-size: 2.5rem;
+}
+.service-introduction .explain-details {
+  margin: 0 180px;
+}
+.service-introduction .explain-details .title-explain {
+  text-align: start;
+  margin-bottom: 1rem;
+}
+.service-introduction .explain-details .content-explain {
+  text-align: justify;
+  line-height: 2rem;
+}
+.service-introduction .explain-details .itemButton {
+  width: fit-content;
+  margin: 2rem auto;
+}
+.service-introduction .border {
+  height: 6px;
+  width: 40%;
+  background: #000;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+.service-introduction .carousel-track {
+  height: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+  .service-introduction .main-content .img-content {
+    height: 260px;
+  }
+  .service-introduction .main-content .img-content .title-img {
+    font-size: 1rem;
+  }
+  .service-introduction .title .title-content {
+    font-size: 1rem;
+  }
+  .service-introduction .carouselWrap .itemCarousel .titleCarousel .titleCarousel-child {
+    font-size: 1rem;
+  }
+  .service-introduction .explain-details {
+    margin: 0 60px;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/reportStyle.scss">.customer-report {
+  color: #635905;
+  font-size: 14px;
+}
+.customer-report .title-page {
+  position: relative;
+  width: 628px;
+  height: 108.85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.customer-report .title-page .contentTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+.customer-report .title-page .title {
+  font-size: 28px;
+  color: #ba333e;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.customer-report .title-page .sub-title {
+  margin-top: 5px;
+  color: #000000;
+}
+.customer-report .title-page .list-event {
+  width: 1088px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding-bottom: 50px;
+}
+.customer-report .title-page .list-event .item {
+  position: relative;
+  min-height: 310px;
+  box-shadow: -1px 1px 5px rgba(99, 89, 5, 0.15);
+}
+.customer-report .title-page .list-event .item img {
+  width: 100%;
+}
+.customer-report .title-page .list-event .item .content {
+  padding: 16px;
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 107px;
+}
+.customer-report .title-page .list-event .item .content .content-item {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.customer-report .title-page .list-event .item .content .read-more {
+  color: #9A845B;
+  font-size: 14px;
+}
+.customer-report .text-page {
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+.customer-report .list-event {
+  width: 1088px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding-bottom: 50px;
+}
+.customer-report .list-event .item {
+  position: relative;
+  min-height: 310px;
+  box-shadow: -1px 1px 5px rgba(99, 89, 5, 0.15);
+}
+.customer-report .list-event .item img {
+  width: 100%;
+}
+.customer-report .list-event .item .content {
+  padding: 16px;
+  text-align: start;
+}
+.customer-report .list-event .item .content .content-item {
+  font-size: 16px;
+  font-weight: bold;
+}
+.customer-report .list-event .item .content .read-more {
+  color: #9a845b;
+  font-size: 14px;
+}
+.customer-report .list-event .line {
+  display: none;
+}
+.customer-report .pagination {
+  display: flex;
+  justify-content: center;
+  width: 372px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.customer-report .pagination .index {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.customer-report .pagination .index:hover {
+  border-radius: 50%;
+  background-color: rgba(231, 225, 215, 0.4705882353);
+}
+.customer-report .pagination .index.select {
+  border-radius: 50%;
+  background-color: #e7e1d7;
+}
+
+@media only screen and (max-width: 600px) {
+  .customer-report .title-page {
+    width: 372px;
+    height: 80.02px;
+    display: flex;
+    margin: 20px auto;
+  }
+  .customer-report .title-page .title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .customer-report .title-page .sub-title {
+    margin-top: 2px;
+    font-size: 12px;
+  }
+  .customer-report .title-page img {
+    width: 372px;
+    height: 80.02px;
+  }
+  .customer-report .text-page {
+    font-size: 14px;
+    width: 308px;
+    margin: 0 auto;
+  }
+  .customer-report .list-event {
+    width: 308px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .customer-report .list-event .item {
+    position: relative;
+    min-height: 310px;
+    box-shadow: -1px 1px 5px rgba(99, 89, 5, 0.15);
+  }
+  .customer-report .list-event .item .content {
+    padding-left: 1px;
+  }
+  .customer-report .list-event .item .content .read-more {
+    font-size: 12px;
+  }
+  .customer-report .list-event .item .content .read-more {
+    left: 1px;
+  }
+  .customer-report .list-event .line {
+    display: block;
+    width: 118%;
+    height: 1px;
+    background: #e7e1d7;
+    position: relative;
+    left: -9%;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/privacyPolicyStyle.scss">.privacy-policy {
+  color: #9A845B;
+  max-width: 904px;
+  margin: 0 auto;
+}
+.privacy-policy .title {
+  margin-top: 12px;
+  font-size: 32px;
+}
+.privacy-policy .sub-title {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.privacy-policy .line {
+  margin-top: 60px;
+  width: 100%;
+  height: 1px;
+  background: #F5F1EB;
+  margin-bottom: 20px;
+}
+.privacy-policy .content {
+  font-size: 12px;
+  text-align: start;
+}
+.privacy-policy .content span {
+  font-weight: 600;
+}
+.privacy-policy .sign {
+  text-align: end;
+  margin-top: 50px;
+}
+.privacy-policy .title-two {
+  font-size: 32px;
+  padding-top: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+  .privacy-policy {
+    max-width: 372px;
+  }
+  .privacy-policy .title {
+    font-size: 20px;
+  }
+  .privacy-policy .sub-title {
+    font-size: 16px;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/FAQStyle.scss">.faq {
+  color: #9A845B;
+  font-size: 14px;
+}
+.faq .title-page {
+  position: relative;
+  width: 628px;
+  height: 108.85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+.faq .title-page .title {
+  font-size: 28px;
+  color: #ba333e;
+  font-weight: 700;
+}
+.faq .title-page .sub-title {
+  margin-top: 5px;
+  color: #000000;
+  font-size: 14px;
+}
+.faq .title-page img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.faq .notion {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto 50px auto;
+  justify-items: center;
+}
+.faq .notion .item {
+  position: relative;
+  width: 324px;
+  padding: 10px 0;
+  border-bottom: 1px solid #9A845B;
+  color: #9a845b !important;
+}
+.faq .notion .item img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.faq .content-page .title {
+  font-size: 32px;
+  padding: 50px 0;
+}
+.faq .content-page .content {
+  max-width: 904px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+.faq .content-page .content .name {
+  width: 38px;
+  text-align: start;
+  font-size: 12px;
+}
+.faq .content-page .content .profile {
+  word-wrap: break-word;
+  text-align: start;
+  width: 100%;
+}
+.faq .content-page .content #q {
+  color: #9A845B;
+}
+.faq .content-page .content #a {
+  color: #635905;
+}
+.faq .content-page .content .line {
+  margin: 20px 0;
+  width: 100%;
+  height: 1px;
+  background: #FFFFFF;
+}
+.faq .content-page .content .next {
+  font-weight: 900;
+  margin-top: 60px;
+  color: #FF0015;
+}
+.faq .content-page .content .item {
+  position: relative;
+  margin: 0 auto;
+  width: 332px;
+  padding: 10px 0;
+  color: #9a845b !important;
+  border-bottom: 1px solid #9A845B;
+}
+.faq .content-page .content .item img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.faq .bg_main {
+  background: #F5F1EB;
+}
+
+.flex {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .faq .title-page {
+    width: 372px;
+    height: 80.02px;
+    display: flex;
+    margin: 20px auto;
+  }
+  .faq .title-page .title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .faq .title-page .sub-title {
+    margin-top: 2px;
+    font-size: 12px;
+  }
+  .faq .title-page img {
+    width: 372px;
+    height: 80.02px;
+  }
+  .faq .notion {
+    padding-bottom: 20px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .faq .notion .item {
+    width: 332px;
+  }
+  .faq .content-page .content {
+    max-width: 90%;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/articleStyle.scss">.article {
+  width: 904px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #9A845B;
+}
+.article .banner {
+  width: 100%;
+}
+.article .map {
+  margin-top: 15px;
+  font-size: 12px;
+  text-align: start;
+}
+.article .title .text-title {
+  padding: 22px 0;
+  font-size: 18px;
+}
+.article .bg-campaign {
+  width: 100%;
+  background-color: #F5F1EB;
+  padding: 8px 0;
+}
+.article .content {
+  text-align: start;
+}
+.article .content .text-content {
+  padding-top: 36px;
+}
+.article .content .item {
+  display: flex;
+  margin-top: 36px;
+}
+.article .content .item img {
+  width: 372px;
+  height: 189.35px;
+}
+.article .content .item .text-item {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .article {
+    width: 372px;
+  }
+  .article .banner {
+    width: 100vw;
+    position: relative;
+    right: calc((100vw - 372px) / 2);
+  }
+  .article .content .item {
+    flex-direction: column;
+  }
+  .article .content .item .text-item {
+    margin-left: 0px;
+    margin-top: 25px;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/dressStyle.scss">.dress {
+  color: #635905;
+  font-size: 14px;
+}
+.dress .title-page {
+  position: relative;
+  width: 628px;
+  height: 108.85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+.dress .title-page .title {
+  font-size: 28px;
+  color: #ba333e;
+  font-weight: 700;
+}
+.dress .title-page .sub-title {
+  margin-top: 5px;
+  color: #000000;
+}
+.dress .title-page img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.dress .text-page {
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+.dress .tab {
+  max-width: 1088px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.dress .tab .item {
+  border: 1px solid #F5F1EB;
+  border-radius: 0;
+  color: #635905;
+}
+.dress .tab #select {
+  background-color: #F5F1EB;
+}
+.dress .content {
+  background-color: #F5F1EB;
+  padding-bottom: 50px;
+}
+.dress .content .title {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dress .content .title .title-bg {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 0;
+}
+.dress .content .title #title-tab-4 {
+  font-size: 12px;
+}
+.dress .content .title .title-text {
+  font-weight: lighter;
+  margin-top: 15px;
+}
+.dress .content .list {
+  max-width: 1124px;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.dress .content .list .item {
+  max-width: 239px;
+  margin-top: 30px;
+}
+.dress .content .list .item img {
+  width: 100%;
+}
+.dress .content .list .item .button {
+  background-color: #FFFFFF;
+  border: 1px solid #9A845B;
+  width: 100%;
+  height: 37px;
+  margin-top: 16px;
+  border-radius: 19px;
+  color: #635905;
+}
+
+#hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .dress .title-page {
+    width: 372px;
+    height: 80.02px;
+    display: flex;
+    margin: 20px auto;
+  }
+  .dress .title-page .title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .dress .title-page .sub-title {
+    margin-top: 2px;
+    font-size: 12px;
+  }
+  .dress .title-page img {
+    width: 372px;
+    height: 80.02px;
+  }
+  .dress .text-page {
+    font-size: 14px;
+    width: 308px;
+    margin: 0 auto;
+  }
+  .dress .tab .item {
+    font-size: 12px;
+  }
+  .dress .content .title {
+    padding: 25px;
+  }
+  .dress .content .title .title-bg {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 0;
+  }
+  .dress .content .title .title-text {
+    font-weight: lighter;
+    margin-top: 15px;
+  }
+  .dress .content .list {
+    max-width: 372px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dress .content .list .item {
+    max-width: 160px;
+    margin-top: 24px;
+  }
+  .dress .content .list .item .button {
+    height: 25px;
+    margin-top: 12px;
+    border-radius: 12px;
+    padding: 0;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/retouchAlbumStyle.scss">.retouch-album {
+  color: #635905;
+  font-size: 14px;
+}
+.retouch-album #color-bg {
+  background-color: #f5f1eb;
+}
+.retouch-album .title-page {
+  position: relative;
+  width: 628px;
+  height: 108.85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+}
+.retouch-album .title-page .title {
+  font-family: "Noto serif SC";
+  font-size: 28px;
+  color: #ba333e;
+  font-weight: 700;
+}
+.retouch-album .title-page .sub-title {
+  margin-top: 5px;
+  color: #000000;
+}
+.retouch-album .title-page img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.retouch-album .text-page {
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+.retouch-album .box {
+  padding: 60px 0;
+}
+.retouch-album .box .title {
+  width: 1088px;
+  margin: 0 auto;
+  text-align: start;
+  padding-bottom: 30px;
+}
+.retouch-album .box .title .text {
+  font-size: 32px;
+  font-weight: bold;
+}
+.retouch-album .box .title .sub-title {
+  font-size: 12px;
+}
+.retouch-album .box .content {
+  width: 732px;
+  margin: 0 auto;
+}
+.retouch-album .box .content .bg-content {
+  width: 100%;
+  margin-bottom: 16px;
+}
+.retouch-album .box .content .detail-content {
+  justify-content: space-between;
+}
+.retouch-album .box .content .detail-content .describe {
+  width: 48%;
+}
+.retouch-album .box .content .detail-content .describe .text {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+.retouch-album .box .content .detail-content .describe .introduce {
+  font-size: 14px;
+  text-align: left;
+}
+.retouch-album .box .content .detail-content .img {
+  width: 48%;
+  justify-content: space-between;
+}
+.retouch-album .box .content .detail-content .img .item {
+  width: calc(50% - 5px);
+}
+.retouch-album .box .content .detail-content .img .item img {
+  width: 100%;
+}
+.retouch-album .box .content .detail-content .img .button {
+  background-color: #ffffff;
+  border: 1px solid #9a845b;
+  width: 100%;
+  height: 25px;
+  margin-top: 16px;
+  border-radius: 19px;
+  color: #635905;
+}
+.retouch-album .album {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0;
+}
+.retouch-album .album .img {
+  width: 50%;
+  background-color: #ededed;
+}
+.retouch-album .album .img img {
+  width: 100%;
+}
+.retouch-album .album .describe {
+  width: 40%;
+}
+.retouch-album .album .describe img {
+  max-width: 100%;
+}
+.retouch-album .album .describe .text-1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.retouch-album .album .describe .text-2 {
+  font-size: 14px;
+}
+.retouch-album .album .describe .text-3 {
+  margin-top: 30px;
+  font-size: 14px;
+  text-align: start;
+}
+
+.py-5 {
+  padding: 20px 0;
+}
+
+.flex {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .retouch-album .title-page {
+    width: 372px;
+    height: 80.02px;
+    display: flex;
+    margin: 20px auto;
+  }
+  .retouch-album .title-page .title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .retouch-album .title-page .sub-title {
+    margin-top: 2px;
+    font-size: 12px;
+  }
+  .retouch-album .title-page img {
+    width: 372px;
+    height: 80.02px;
+  }
+  .retouch-album .text-page {
+    font-size: 14px;
+    width: 308px;
+    margin: 0 auto;
+  }
+  .retouch-album .box .title {
+    width: 372px;
+    margin: 0 0 0 10px;
+  }
+  .retouch-album .box .title .text {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .retouch-album .box .content {
+    width: 372px;
+  }
+  .retouch-album .box .content .detail-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .retouch-album .box .content .detail-content .describe {
+    width: 100%;
+  }
+  .retouch-album .box .content .detail-content .describe .text {
+    font-size: 16px;
+  }
+  .retouch-album .box .content .detail-content .describe .introduce {
+    font-size: 13px;
+  }
+  .retouch-album .box .content .detail-content .img {
+    width: 340px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .retouch-album .box .content .detail-content .img .button {
+    margin-bottom: 16px;
+  }
+  .retouch-album .album {
+    max-width: 372px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .retouch-album .album .img {
+    width: 100%;
+    height: 209px;
+  }
+  .retouch-album .album .describe {
+    margin-top: 20px;
+    width: 100%;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/produceCrewStyle.scss">.produce-crew {
+  color: #635905;
+  font-size: 14px;
+}
+.produce-crew #color-bg {
+  background-color: #f5f1eb;
+}
+.produce-crew .title-page {
+  position: relative;
+  width: 628px;
+  height: 108.85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+}
+.produce-crew .title-page .title {
+  font-size: 28px;
+  color: #ba333e;
+  font-weight: 700;
+}
+.produce-crew .title-page .sub-title {
+  margin-top: 5px;
+  color: #000000;
+}
+.produce-crew .title-page img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.produce-crew .text-page {
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+.produce-crew .content {
+  padding: 60px 0;
+}
+.produce-crew .content .title {
+  width: 1088px;
+  margin: 0 auto;
+}
+.produce-crew .content .title .text {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: start;
+}
+.produce-crew .content .title .sub-title {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.produce-crew .content .list-img {
+  width: 1088px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.produce-crew .content .list-img .item {
+  width: 239px;
+}
+.produce-crew .content .list-img .item img {
+  width: 100%;
+}
+.produce-crew .content .list-img .item .title-img {
+  margin: 20px 0;
+}
+
+.py-5 {
+  padding: 20px 0;
+}
+
+.flex {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .produce-crew .title-page {
+    width: 372px;
+    height: 80.02px;
+    display: flex;
+    margin: 20px auto;
+  }
+  .produce-crew .title-page .title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .produce-crew .title-page .sub-title {
+    margin-top: 2px;
+    font-size: 12px;
+  }
+  .produce-crew .title-page img {
+    width: 372px;
+    height: 80.02px;
+  }
+  .produce-crew .content {
+    padding: 60px 0;
+  }
+  .produce-crew .content .title {
+    width: 332px;
+  }
+  .produce-crew .content .title .text {
+    font-size: 18px;
+  }
+  .produce-crew .content .title .sub-title {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+  .produce-crew .content .title .sub-title .text-start {
+    margin-bottom: 40px;
+    text-align: start;
+  }
+  .produce-crew .content .list-img {
+    width: 290px;
+    margin-top: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .produce-crew .content .list-img .item {
+    width: 140px;
+  }
+  .produce-crew .content .list-img .item img {
+    width: 100%;
+  }
+  .produce-crew .content .list-img .item .title-img {
+    margin: 10px 0;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/conceptStyle.scss">.concept {
+  color: #635905;
+  font-size: 14px;
+  background: linear-gradient(to bottom, #ffffff, #f5f1eb);
+}
+.concept .title-page {
+  position: relative;
+  width: 628px;
+  height: 108.85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto 20px;
+}
+.concept .title-page .title {
+  font-size: 28px;
+  color: #ba333e;
+  font-weight: 700;
+}
+.concept .title-page .sub-title {
+  margin-top: 5px;
+  color: #000000;
+}
+.concept .title-page img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.concept .text-page {
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+.concept .describe-page {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.concept .describe-page .text-describe {
+  padding: 22px 0;
+  font-size: 18px;
+}
+.concept .content {
+  padding-top: 60px;
+  width: 920px;
+  margin: 0 auto;
+}
+.concept .content .detail-content {
+  justify-content: space-between;
+}
+.concept .content .detail-content .describe {
+  width: 352px;
+}
+.concept .content .detail-content .describe .text {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+.concept .content .detail-content .describe .introduce {
+  font-size: 14px;
+}
+.concept .content .detail-content .img {
+  width: 537px;
+}
+.concept .move {
+  width: 536px;
+  height: 302px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.flex {
+  display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .concept {
+    width: 372px;
+    margin: auto;
+  }
+  .concept .title-page {
+    width: 372px;
+    height: 80.02px;
+    display: flex;
+    margin: 20px auto;
+  }
+  .concept .title-page .title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .concept .title-page .sub-title {
+    margin-top: 2px;
+    font-size: 12px;
+  }
+  .concept .title-page img {
+    width: 372px;
+    height: 80.02px;
+  }
+  .concept .text-page {
+    font-size: 14px;
+    width: 308px;
+    margin: 0 auto;
+  }
+  .concept .content {
+    width: 100%;
+    padding-top: 30px;
+  }
+  .concept .content .detail-content {
+    flex-direction: column;
+  }
+  .concept .content .detail-content .describe {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .concept .content .detail-content .describe .text {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 20px 0;
+  }
+  .concept .content .detail-content .img {
+    width: 100%;
+  }
+  .concept .move {
+    width: 100%;
+    height: 209px;
+    margin: 60px 0;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/sceneStyle.scss">.scene {
+  color: #635905;
+  font-size: 14px;
+}
+.scene .title-page {
+  position: relative;
+  width: 628px;
+  height: 108.85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto 20px;
+}
+.scene .title-page .title {
+  font-size: 28px;
+  color: #ba333e;
+  font-weight: 700;
+}
+.scene .title-page .sub-title {
+  margin-top: 5px;
+  color: #000000;
+}
+.scene .title-page img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.scene .text-page {
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+.scene .notion {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto 40px;
+  justify-content: center;
+}
+.scene .notion .item {
+  position: relative;
+  width: 332px;
+  padding: 10px 0;
+  border-bottom: 1px solid #9a845b;
+  color: #9a845b;
+}
+.scene .notion .item img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.scene .content .title-content {
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 60px;
+  color: #9a845b;
+}
+.scene .content .sub-title {
+  color: #9a845b;
+  font-size: 12px;
+}
+.scene .content .list-content {
+  max-width: 1088px;
+  margin: 20px auto;
+  display: flex;
+  padding: 50px 0;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.scene .content .list-content .item {
+  width: 352px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.scene .content .list-content .item .index {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #9a845b;
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scene .content .list-content .item .title-item {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+.scene .content .list-content .item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.scene .content .list-content .item .image-container {
+  overflow: hidden;
+  position: relative;
+  margin-top: 25px;
+  height: 352px;
+  width: 100%;
+  cursor: pointer;
+}
+.scene .content .list-content .item .image-container img {
+  transition: transform 0.3s ease;
+}
+.scene .content .list-content .item .image-container:hover img {
+  transform: scale(1.25);
+}
+
+#color-bg {
+  background-color: #f5f1eb;
+}
+
+@media only screen and (max-width: 600px) {
+  .scene .title-page {
+    width: 372px;
+    height: 80.02px;
+    display: flex;
+    margin: 20px auto;
+  }
+  .scene .title-page .title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .scene .title-page .sub-title {
+    margin-top: 2px;
+    font-size: 12px;
+  }
+  .scene .title-page img {
+    width: 372px;
+    height: 80.02px;
+  }
+  .scene .text-page {
+    font-size: 14px;
+    width: 308px;
+    margin: 0 auto;
+  }
+  .scene .notion {
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .scene .notion .item {
+    width: 332px;
+  }
+  .scene .content .title-content {
+    font-size: 18px;
+  }
+  .scene .content .list-content {
+    gap: 12px;
+    flex-wrap: wrap;
+    width: 332px;
+    padding: 0;
+  }
+  .scene .content .list-content .item {
+    width: 160px;
+  }
+  .scene .content .list-content .item .image-container {
+    height: 160px;
+    margin-top: 15px;
+  }
+  .scene .content .list-content .item .index {
+    width: 100%;
+    height: 25px;
+  }
+  .scene .content .list-content .item .title-item {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 15px;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/node_modules/swiper/swiper.css">/**
+ * Swiper 11.0.6
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * https://swiperjs.com
+ *
+ * Copyright 2014-2024 Vladimir Kharlampidi
+ *
+ * Released under the MIT License
+ *
+ * Released on: February 5, 2024
+ */
+
+/* FONT_START */
+@font-face {
+  font-family: 'swiper-icons';
+  src: url('data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA');
+  font-weight: 400;
+  font-style: normal;
+}
+/* FONT_END */
+:root {
+  --swiper-theme-color: #007aff;
+  /*
+  --swiper-preloader-color: var(--swiper-theme-color);
+  --swiper-wrapper-transition-timing-function: initial;
+  */
+}
+:host {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  /* Fix of Webkit flickering */
+  z-index: 1;
+  display: block;
+}
+.swiper-vertical > .swiper-wrapper {
+  flex-direction: column;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+  box-sizing: content-box;
+}
+.swiper-android .swiper-slide,
+.swiper-ios .swiper-slide,
+.swiper-wrapper {
+  transform: translate3d(0px, 0, 0);
+}
+.swiper-horizontal {
+  touch-action: pan-y;
+}
+.swiper-vertical {
+  touch-action: pan-x;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  display: block;
+}
+.swiper-slide-invisible-blank {
+  visibility: hidden;
+}
+/* Auto Height */
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
+  height: auto;
+}
+.swiper-autoheight .swiper-wrapper {
+  align-items: flex-start;
+  transition-property: transform, height;
+}
+.swiper-backface-hidden .swiper-slide {
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+/* 3D Effects */
+.swiper-3d.swiper-css-mode .swiper-wrapper {
+  perspective: 1200px;
+}
+.swiper-3d .swiper-wrapper {
+  transform-style: preserve-3d;
+}
+.swiper-3d {
+  perspective: 1200px;
+}
+.swiper-3d .swiper-slide,
+.swiper-3d .swiper-cube-shadow {
+  transform-style: preserve-3d;
+}
+/* CSS Mode */
+.swiper-css-mode > .swiper-wrapper {
+  overflow: auto;
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
+}
+.swiper-css-mode > .swiper-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.swiper-css-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: start start;
+}
+.swiper-css-mode.swiper-horizontal > .swiper-wrapper {
+  scroll-snap-type: x mandatory;
+}
+.swiper-css-mode.swiper-vertical > .swiper-wrapper {
+  scroll-snap-type: y mandatory;
+}
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
+  scroll-snap-type: none;
+}
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: none;
+}
+.swiper-css-mode.swiper-centered > .swiper-wrapper::before {
+  content: '';
+  flex-shrink: 0;
+  order: 9999;
+}
+.swiper-css-mode.swiper-centered > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: center center;
+  scroll-snap-stop: always;
+}
+.swiper-css-mode.swiper-centered.swiper-horizontal > .swiper-wrapper > .swiper-slide:first-child {
+  margin-inline-start: var(--swiper-centered-offset-before);
+}
+.swiper-css-mode.swiper-centered.swiper-horizontal > .swiper-wrapper::before {
+  height: 100%;
+  min-height: 1px;
+  width: var(--swiper-centered-offset-after);
+}
+.swiper-css-mode.swiper-centered.swiper-vertical > .swiper-wrapper > .swiper-slide:first-child {
+  margin-block-start: var(--swiper-centered-offset-before);
+}
+.swiper-css-mode.swiper-centered.swiper-vertical > .swiper-wrapper::before {
+  width: 100%;
+  min-width: 1px;
+  height: var(--swiper-centered-offset-after);
+}
+/* Slide styles start */
+/* 3D Shadows */
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top,
+.swiper-3d .swiper-slide-shadow-bottom,
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top,
+.swiper-3d .swiper-slide-shadow-bottom {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+.swiper-3d .swiper-slide-shadow {
+  background: rgba(0, 0, 0, 0.15);
+}
+.swiper-3d .swiper-slide-shadow-left {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.swiper-3d .swiper-slide-shadow-top {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.swiper-3d .swiper-slide-shadow-bottom {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.swiper-lazy-preloader {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -21px;
+  margin-top: -21px;
+  z-index: 10;
+  transform-origin: 50%;
+  box-sizing: border-box;
+  border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
+  border-radius: 50%;
+  border-top-color: transparent;
+}
+.swiper:not(.swiper-watch-progress) .swiper-lazy-preloader,
+.swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader {
+  animation: swiper-preloader-spin 1s infinite linear;
+}
+.swiper-lazy-preloader-white {
+  --swiper-preloader-color: #fff;
+}
+.swiper-lazy-preloader-black {
+  --swiper-preloader-color: #000;
+}
+@keyframes swiper-preloader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Slide styles end */
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/node_modules/swiper/modules/navigation.css">:root {
+  --swiper-navigation-size: 44px;
+  /*
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: var(--swiper-theme-color);
+  */
+}
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
+.swiper-button-prev.swiper-button-hidden,
+.swiper-button-next.swiper-button-hidden {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+.swiper-navigation-disabled .swiper-button-prev,
+.swiper-navigation-disabled .swiper-button-next {
+  display: none !important;
+}
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: center;
+}
+.swiper-rtl .swiper-button-prev svg,
+.swiper-rtl .swiper-button-next svg {
+  transform: rotate(180deg);
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset, 10px);
+  right: auto;
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, 10px);
+  left: auto;
+}
+.swiper-button-lock {
+  display: none;
+}
+/* Navigation font start */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: 'prev';
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, 10px);
+  left: auto;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: 'next';
+}
+/* Navigation font end */
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/node_modules/swiper/swiper-bundle.css">/**
+ * Swiper 11.0.6
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * https://swiperjs.com
+ *
+ * Copyright 2014-2024 Vladimir Kharlampidi
+ *
+ * Released under the MIT License
+ *
+ * Released on: February 5, 2024
+ */
+
+/* FONT_START */
+@font-face {
+  font-family: 'swiper-icons';
+  src: url('data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA');
+  font-weight: 400;
+  font-style: normal;
+}
+/* FONT_END */
+:root {
+  --swiper-theme-color: #007aff;
+  /*
+  --swiper-preloader-color: var(--swiper-theme-color);
+  --swiper-wrapper-transition-timing-function: initial;
+  */
+}
+:host {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  /* Fix of Webkit flickering */
+  z-index: 1;
+  display: block;
+}
+.swiper-vertical > .swiper-wrapper {
+  flex-direction: column;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+  box-sizing: content-box;
+}
+.swiper-android .swiper-slide,
+.swiper-ios .swiper-slide,
+.swiper-wrapper {
+  transform: translate3d(0px, 0, 0);
+}
+.swiper-horizontal {
+  touch-action: pan-y;
+}
+.swiper-vertical {
+  touch-action: pan-x;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  display: block;
+}
+.swiper-slide-invisible-blank {
+  visibility: hidden;
+}
+/* Auto Height */
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
+  height: auto;
+}
+.swiper-autoheight .swiper-wrapper {
+  align-items: flex-start;
+  transition-property: transform, height;
+}
+.swiper-backface-hidden .swiper-slide {
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+/* 3D Effects */
+.swiper-3d.swiper-css-mode .swiper-wrapper {
+  perspective: 1200px;
+}
+.swiper-3d .swiper-wrapper {
+  transform-style: preserve-3d;
+}
+.swiper-3d {
+  perspective: 1200px;
+}
+.swiper-3d .swiper-slide,
+.swiper-3d .swiper-cube-shadow {
+  transform-style: preserve-3d;
+}
+/* CSS Mode */
+.swiper-css-mode > .swiper-wrapper {
+  overflow: auto;
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
+}
+.swiper-css-mode > .swiper-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.swiper-css-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: start start;
+}
+.swiper-css-mode.swiper-horizontal > .swiper-wrapper {
+  scroll-snap-type: x mandatory;
+}
+.swiper-css-mode.swiper-vertical > .swiper-wrapper {
+  scroll-snap-type: y mandatory;
+}
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper {
+  scroll-snap-type: none;
+}
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: none;
+}
+.swiper-css-mode.swiper-centered > .swiper-wrapper::before {
+  content: '';
+  flex-shrink: 0;
+  order: 9999;
+}
+.swiper-css-mode.swiper-centered > .swiper-wrapper > .swiper-slide {
+  scroll-snap-align: center center;
+  scroll-snap-stop: always;
+}
+.swiper-css-mode.swiper-centered.swiper-horizontal > .swiper-wrapper > .swiper-slide:first-child {
+  margin-inline-start: var(--swiper-centered-offset-before);
+}
+.swiper-css-mode.swiper-centered.swiper-horizontal > .swiper-wrapper::before {
+  height: 100%;
+  min-height: 1px;
+  width: var(--swiper-centered-offset-after);
+}
+.swiper-css-mode.swiper-centered.swiper-vertical > .swiper-wrapper > .swiper-slide:first-child {
+  margin-block-start: var(--swiper-centered-offset-before);
+}
+.swiper-css-mode.swiper-centered.swiper-vertical > .swiper-wrapper::before {
+  width: 100%;
+  min-width: 1px;
+  height: var(--swiper-centered-offset-after);
+}
+/* Slide styles start */
+/* 3D Shadows */
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top,
+.swiper-3d .swiper-slide-shadow-bottom,
+.swiper-3d .swiper-slide-shadow,
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-top,
+.swiper-3d .swiper-slide-shadow-bottom {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+.swiper-3d .swiper-slide-shadow {
+  background: rgba(0, 0, 0, 0.15);
+}
+.swiper-3d .swiper-slide-shadow-left {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.swiper-3d .swiper-slide-shadow-top {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.swiper-3d .swiper-slide-shadow-bottom {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.swiper-lazy-preloader {
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -21px;
+  margin-top: -21px;
+  z-index: 10;
+  transform-origin: 50%;
+  box-sizing: border-box;
+  border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
+  border-radius: 50%;
+  border-top-color: transparent;
+}
+.swiper:not(.swiper-watch-progress) .swiper-lazy-preloader,
+.swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader {
+  animation: swiper-preloader-spin 1s infinite linear;
+}
+.swiper-lazy-preloader-white {
+  --swiper-preloader-color: #fff;
+}
+.swiper-lazy-preloader-black {
+  --swiper-preloader-color: #000;
+}
+@keyframes swiper-preloader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Slide styles end */
+.swiper-virtual .swiper-slide {
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+.swiper-virtual.swiper-css-mode .swiper-wrapper::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+.swiper-virtual.swiper-css-mode.swiper-horizontal .swiper-wrapper::after {
+  height: 1px;
+  width: var(--swiper-virtual-size);
+}
+.swiper-virtual.swiper-css-mode.swiper-vertical .swiper-wrapper::after {
+  width: 1px;
+  height: var(--swiper-virtual-size);
+}
+:root {
+  --swiper-navigation-size: 44px;
+  /*
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: var(--swiper-theme-color);
+  */
+}
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
+.swiper-button-prev.swiper-button-hidden,
+.swiper-button-next.swiper-button-hidden {
+  opacity: 0;
+  cursor: auto;
+  pointer-events: none;
+}
+.swiper-navigation-disabled .swiper-button-prev,
+.swiper-navigation-disabled .swiper-button-next {
+  display: none !important;
+}
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: center;
+}
+.swiper-rtl .swiper-button-prev svg,
+.swiper-rtl .swiper-button-next svg {
+  transform: rotate(180deg);
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: var(--swiper-navigation-sides-offset, 10px);
+  right: auto;
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, 10px);
+  left: auto;
+}
+.swiper-button-lock {
+  display: none;
+}
+/* Navigation font start */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: 'prev';
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, 10px);
+  left: auto;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: 'next';
+}
+/* Navigation font end */
+:root {
+  /*
+  --swiper-pagination-color: var(--swiper-theme-color);
+  --swiper-pagination-left: auto;
+  --swiper-pagination-right: 8px;
+  --swiper-pagination-bottom: 8px;
+  --swiper-pagination-top: auto;
+  --swiper-pagination-fraction-color: inherit;
+  --swiper-pagination-progressbar-bg-color: rgba(0,0,0,0.25);
+  --swiper-pagination-progressbar-size: 4px;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-border-radius: 50%;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+  */
+}
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: 300ms opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+.swiper-pagination.swiper-pagination-hidden {
+  opacity: 0;
+}
+.swiper-pagination-disabled > .swiper-pagination,
+.swiper-pagination.swiper-pagination-disabled {
+  display: none !important;
+}
+/* Common Styles */
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 8px);
+  top: var(--swiper-pagination-top, auto);
+  left: 0;
+  width: 100%;
+}
+/* Bullets */
+.swiper-pagination-bullets-dynamic {
+  overflow: hidden;
+  font-size: 0;
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  transform: scale(0.33);
+  position: relative;
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
+  transform: scale(1);
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+  transform: scale(1);
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
+  transform: scale(0.66);
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+  transform: scale(0.33);
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+  transform: scale(0.66);
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+  transform: scale(0.33);
+}
+.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+  display: inline-block;
+  border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
+  background: var(--swiper-pagination-bullet-inactive-color, #000);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+}
+button.swiper-pagination-bullet {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+          appearance: none;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+}
+.swiper-pagination-bullet:only-child {
+  display: none !important;
+}
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+}
+.swiper-vertical > .swiper-pagination-bullets,
+.swiper-pagination-vertical.swiper-pagination-bullets {
+  right: var(--swiper-pagination-right, 8px);
+  left: var(--swiper-pagination-left, auto);
+  top: 50%;
+  transform: translate3d(0px, -50%, 0);
+}
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: var(--swiper-pagination-bullet-vertical-gap, 6px) 0;
+  display: block;
+}
+.swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+}
+.swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  display: inline-block;
+  transition: 200ms transform,
+        200ms top;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+}
+.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  transition: 200ms transform,
+        200ms left;
+}
+.swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  transition: 200ms transform,
+    200ms right;
+}
+/* Fraction */
+.swiper-pagination-fraction {
+  color: var(--swiper-pagination-fraction-color, inherit);
+}
+/* Progress */
+.swiper-pagination-progressbar {
+  background: var(--swiper-pagination-progressbar-bg-color, rgba(0, 0, 0, 0.25));
+  position: absolute;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transform-origin: left top;
+}
+.swiper-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  transform-origin: right top;
+}
+.swiper-horizontal > .swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-horizontal,
+.swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
+.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite {
+  width: 100%;
+  height: var(--swiper-pagination-progressbar-size, 4px);
+  left: 0;
+  top: 0;
+}
+.swiper-vertical > .swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-vertical,
+.swiper-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
+.swiper-pagination-progressbar.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite {
+  width: var(--swiper-pagination-progressbar-size, 4px);
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.swiper-pagination-lock {
+  display: none;
+}
+:root {
+  /*
+  --swiper-scrollbar-border-radius: 10px;
+  --swiper-scrollbar-top: auto;
+  --swiper-scrollbar-bottom: 4px;
+  --swiper-scrollbar-left: auto;
+  --swiper-scrollbar-right: 4px;
+  --swiper-scrollbar-sides-offset: 1%;
+  --swiper-scrollbar-bg-color: rgba(0, 0, 0, 0.1);
+  --swiper-scrollbar-drag-bg-color: rgba(0, 0, 0, 0.5);
+  --swiper-scrollbar-size: 4px;
+  */
+}
+.swiper-scrollbar {
+  border-radius: var(--swiper-scrollbar-border-radius, 10px);
+  position: relative;
+  touch-action: none;
+  background: var(--swiper-scrollbar-bg-color, rgba(0, 0, 0, 0.1));
+}
+.swiper-scrollbar-disabled > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-disabled {
+  display: none !important;
+}
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: absolute;
+  left: var(--swiper-scrollbar-sides-offset, 1%);
+  bottom: var(--swiper-scrollbar-bottom, 4px);
+  top: var(--swiper-scrollbar-top, auto);
+  z-index: 50;
+  height: var(--swiper-scrollbar-size, 4px);
+  width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
+}
+.swiper-vertical > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-vertical {
+  position: absolute;
+  left: var(--swiper-scrollbar-left, auto);
+  right: var(--swiper-scrollbar-right, 4px);
+  top: var(--swiper-scrollbar-sides-offset, 1%);
+  z-index: 50;
+  width: var(--swiper-scrollbar-size, 4px);
+  height: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
+}
+.swiper-scrollbar-drag {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: var(--swiper-scrollbar-drag-bg-color, rgba(0, 0, 0, 0.5));
+  border-radius: var(--swiper-scrollbar-border-radius, 10px);
+  left: 0;
+  top: 0;
+}
+.swiper-scrollbar-cursor-drag {
+  cursor: move;
+}
+.swiper-scrollbar-lock {
+  display: none;
+}
+/* Zoom container styles start */
+.swiper-zoom-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.swiper-zoom-container > img,
+.swiper-zoom-container > svg,
+.swiper-zoom-container > canvas {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+/* Zoom container styles end */
+.swiper-slide-zoomed {
+  cursor: move;
+  touch-action: none;
+}
+/* a11y */
+.swiper .swiper-notification {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -1000;
+}
+.swiper-free-mode > .swiper-wrapper {
+  transition-timing-function: ease-out;
+  margin: 0 auto;
+}
+.swiper-grid > .swiper-wrapper {
+  flex-wrap: wrap;
+}
+.swiper-grid-column > .swiper-wrapper {
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.swiper-fade.swiper-free-mode .swiper-slide {
+  transition-timing-function: ease-out;
+}
+.swiper-fade .swiper-slide {
+  pointer-events: none;
+  transition-property: opacity;
+}
+.swiper-fade .swiper-slide .swiper-slide {
+  pointer-events: none;
+}
+.swiper-fade .swiper-slide-active {
+  pointer-events: auto;
+}
+.swiper-fade .swiper-slide-active .swiper-slide-active {
+  pointer-events: auto;
+}
+.swiper-cube {
+  overflow: visible;
+}
+.swiper-cube .swiper-slide {
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 1;
+  visibility: hidden;
+  transform-origin: 0 0;
+  width: 100%;
+  height: 100%;
+}
+.swiper-cube .swiper-slide .swiper-slide {
+  pointer-events: none;
+}
+.swiper-cube.swiper-rtl .swiper-slide {
+  transform-origin: 100% 0;
+}
+.swiper-cube .swiper-slide-active,
+.swiper-cube .swiper-slide-active .swiper-slide-active {
+  pointer-events: auto;
+}
+.swiper-cube .swiper-slide-active,
+.swiper-cube .swiper-slide-next,
+.swiper-cube .swiper-slide-prev {
+  pointer-events: auto;
+  visibility: visible;
+}
+.swiper-cube .swiper-cube-shadow {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  z-index: 0;
+}
+.swiper-cube .swiper-cube-shadow:before {
+  content: '';
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  filter: blur(50px);
+}
+.swiper-cube .swiper-slide-next + .swiper-slide {
+  pointer-events: auto;
+  visibility: visible;
+}
+/* Cube slide shadows start */
+.swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-top,
+.swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-bottom,
+.swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-left,
+.swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-right {
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+/* Cube slide shadows end */
+.swiper-flip {
+  overflow: visible;
+}
+.swiper-flip .swiper-slide {
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  z-index: 1;
+}
+.swiper-flip .swiper-slide .swiper-slide {
+  pointer-events: none;
+}
+.swiper-flip .swiper-slide-active,
+.swiper-flip .swiper-slide-active .swiper-slide-active {
+  pointer-events: auto;
+}
+/* Flip slide shadows start */
+.swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-top,
+.swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-bottom,
+.swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-left,
+.swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-right {
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+/* Flip slide shadows end */
+.swiper-creative .swiper-slide {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: hidden;
+  transition-property: transform, opacity, height;
+}
+.swiper-cards {
+  overflow: visible;
+}
+.swiper-cards .swiper-slide {
+  transform-origin: center bottom;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: hidden;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/swiper.scss">.ReactModal__Overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(100, 100, 100, 0.75) !important;
+}
+
+.modalSwiper {
+  width: 95vw;
+  max-width: 1280px;
+  height: 90vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none !important;
+}
+.modalSwiper .mySwiper {
+  width: 100%;
+  height: 90%;
+}
+.modalSwiper .mySwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalSwiper .mySwiper .swiper-slide img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+.modalSwiper .mySwiper .swiper-button-prev, .modalSwiper .mySwiper .swiper-button-next {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+.modalSwiper .mySwiper .swiper-button-prev::after, .modalSwiper .mySwiper .swiper-button-next::after {
+  content: "" !important;
+}
+.modalSwiper .mySwiper .swiper-button-prev::before, .modalSwiper .mySwiper .swiper-button-next::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.modalSwiper .mySwiper .swiper-button-prev::before {
+  border-width: 0.75rem 0 0.75rem 1rem;
+  border-color: transparent transparent transparent #9a845b;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.modalSwiper .mySwiper .swiper-button-next::before {
+  border-width: 0.75rem 1rem 0.75rem 0;
+  border-color: transparent #9a845b transparent transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.modalSwiper .close-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+  z-index: 100;
+}
+.modalSwiper .line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #9a845b;
+  transform-origin: center;
+}
+.modalSwiper .line:nth-child(1) {
+  transform: rotate(45deg);
+}
+.modalSwiper .line:nth-child(2) {
+  transform: rotate(-45deg);
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/studio.scss">.pc {
+  display: block;
+}
+
+.font14 {
+  font-size: 14px;
+}
+
+.font12 {
+  font-size: 12px;
+}
+
+.font18 {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+}
+.studio {
+  color: #635905;
+  font-size: 14px;
+}
+.studio .title-page {
+  position: relative;
+  width: 628px;
+  height: 108.85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto 20px;
+}
+.studio .title-page .title {
+  font-size: 28px;
+  color: #ba333e;
+  font-weight: bold;
+}
+.studio .title-page .sub-title {
+  margin-top: 5px;
+  color: #000000;
+}
+.studio .title-page img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.studio .text-page {
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+.studio .describe-page {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.studio .describe-page .text-describe {
+  padding: 22px 0;
+  font-size: 18px;
+}
+.studio .content {
+  padding: 60px 200px;
+}
+.studio .content.bgE7 {
+  background-color: #F5F1EB;
+}
+.studio .content.bgGradient {
+  background-image: linear-gradient(white, #F5F1EB, #F5F1EB, #F5F1EB);
+}
+.studio .content .describe-page {
+  margin-bottom: 50px;
+}
+.studio .content .detail-content {
+  justify-content: space-between;
+}
+.studio .content .detail-content .describe {
+  width: 33.33333%;
+}
+.studio .content .detail-content .describe .text {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 20px 0 10px 0;
+}
+.studio .content .detail-content .describe .text-main {
+  font-size: 22px;
+  color: #ba333e;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.studio .content .detail-content .describe .button-price {
+  padding: 10px 0;
+  width: 268px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border: 1px solid #9a845b;
+  color: #9a845b;
+  border-radius: 20px;
+  margin: 20px auto;
+}
+.studio .content .detail-content .describe .button-price .text1 {
+  font-size: 24px;
+  line-height: 24px;
+}
+.studio .content .detail-content .describe .button-price .text2 {
+  font-size: 18px;
+  line-height: 18.5px;
+}
+.studio .content .detail-content .describe .button-price .text3 {
+  font-size: 12px;
+  line-height: 14px;
+}
+.studio .content .detail-content .describe .introduce {
+  font-size: 14px;
+}
+.studio .content .detail-content .img {
+  width: 57%;
+}
+.studio .content .detail-content .img img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+.studio .content .list-suggest {
+  display: flex;
+  margin: 50px 0;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.studio .content .list-suggest .item-suggest {
+  margin: 10px;
+}
+.studio .content .list-suggest .item-suggest .btn-suggest {
+  width: 160px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  font-size: 12px;
+  margin: 10px 0;
+  color: #9a845b;
+  background-color: #F5F1EB;
+}
+.studio .content .list-suggest .item-suggest .btn-suggest.white {
+  background-color: white;
+}
+.studio .content .list-suggest .item-suggest span {
+  font-size: 12px;
+  color: #9a845b;
+}
+.studio .move {
+  width: 536px;
+  height: 302px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+.studio .youtubeWrap {
+  padding: 80px 200px;
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+}
+.studio .youtubeWrap .itemYoutube {
+  width: calc(50% - 15px);
+}
+.studio .youtubeWrap .itemYoutube iframe {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 224px;
+}
+.studio .youtubeWrap .itemYoutube .desYoutube {
+  margin-bottom: 20px;
+}
+.studio .allWrap {
+  padding: 80px;
+  width: 40%;
+  margin: 0 auto;
+}
+.studio .allWrap img {
+  margin: 20px 0;
+  width: 100%;
+}
+.studio .allWrap .title {
+  text-align: left;
+}
+
+.flex {
+  display: flex;
+}
+
+.mb {
+  display: none;
+}
+
+.noBoder {
+  border: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .mb {
+    display: block;
+  }
+  .studio {
+    margin: auto;
+  }
+  .studio .title-page {
+    width: 372px;
+    height: 80.02px;
+    display: flex;
+    margin: 20px auto;
+  }
+  .studio .title-page .title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .studio .title-page .sub-title {
+    margin-top: 2px;
+    color: #9a845b;
+    font-size: 12px;
+  }
+  .studio .title-page img {
+    width: 372px;
+    height: 80.02px;
+  }
+  .studio .text-page {
+    color: #9a845b;
+    font-size: 14px;
+    width: 308px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+  .studio .content {
+    width: 100%;
+    padding: 40px 15px;
+  }
+  .studio .content .textbt {
+    padding: 20px 0;
+  }
+  .studio .content .detail-content {
+    flex-direction: column;
+  }
+  .studio .content .detail-content .describe {
+    width: 95%;
+    margin: 20px auto;
+  }
+  .studio .content .detail-content .describe .text {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+  .studio .content .detail-content .describe .text-main {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .studio .content .detail-content .img {
+    width: 100%;
+  }
+  .studio .content .list-suggest {
+    margin: 0;
+    justify-content: start;
+    align-items: stretch;
+  }
+  .studio .content .list-suggest .item-suggest {
+    width: 50%;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid rgba(172, 150, 113, 0.1803921569);
+  }
+  .studio .content .list-suggest .item-suggest span {
+    font-size: 10px;
+  }
+  .studio .move {
+    width: 100%;
+    height: 209px;
+    margin: 60px 0;
+  }
+  .studio .youtubeWrap {
+    padding: 30px;
+    flex-wrap: wrap;
+  }
+  .studio .youtubeWrap .itemYoutube {
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(172, 150, 113, 0.1803921569);
+  }
+  .studio .allWrap {
+    padding: 30px;
+    width: 100%;
+  }
+  .studio .allWrap img {
+    margin: 0 0 20px 0;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/assets/scss/contact.scss">.contactPageWrap {
+  padding: 80px 400px 0 400px;
+}
+.contactPageWrap .title {
+  color: #9a845b;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Serif;
+  margin-bottom: 15px;
+}
+.contactPageWrap .des {
+  color: #9a845b;
+  font-size: 16px;
+}
+.contactPageWrap hr {
+  color: #E7E1D7;
+  height: 1px;
+  width: 372px;
+  opacity: 0.5;
+  margin: 30px auto;
+}
+.contactPageWrap .text {
+  color: #9a845b;
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.contactPageWrap .itemField {
+  text-align: left;
+  margin-top: 20px;
+}
+.contactPageWrap .itemField .titleField {
+  color: #635905;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.contactPageWrap .itemField .inputField {
+  height: 32px;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid #9a845b;
+  background-color: white;
+  color: #9a845b;
+  padding: 0 10px;
+  outline: none;
+}
+.contactPageWrap .itemField textarea {
+  background-color: white;
+  height: 145px !important;
+}
+.contactPageWrap .itemField .itemInput {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: center;
+}
+.contactPageWrap .itemField span {
+  font-size: 14px;
+  width: 100px;
+  color: #9a845b;
+}
+.contactPageWrap .listButton {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+.contactPageWrap .listButton .button1 {
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  border: 1px solid #9a845b;
+  border-radius: 20px;
+  margin: 0 20px;
+  color: #9a845b;
+  cursor: pointer;
+}
+.contactPageWrap .listButton .button2 {
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  border: 1px solid #9a845b;
+  border-radius: 20px;
+  margin: 0 10px;
+  background: #9a845b;
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .contactPageWrap {
+    padding: 10px;
+  }
+  .contactPageWrap .listButton {
+    flex-direction: column;
+  }
+  .contactPageWrap .listButton .button1 {
+    width: 100%;
+    margin: 10px 0 !important;
+  }
+  .contactPageWrap .listButton .button2 {
+    width: 100%;
+    margin: 10px 0 !important;
+  }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/Admin/Desktop/freelancer/photo-wedding/wd-app/src/index.css">:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  /*font-weight: 400;*/
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  /*font-synthesis: none;*/
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  font-family: 'Noto Serif JP';
+  letter-spacing: 1px;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+</style><style type="text/css">.vue-slider-dot{position:absolute;-webkit-transition:all 0s;transition:all 0s;z-index:5}.vue-slider-dot:focus{outline:none}.vue-slider-dot-tooltip{position:absolute;visibility:hidden}.vue-slider-dot-hover:hover .vue-slider-dot-tooltip,.vue-slider-dot-tooltip-show{visibility:visible}.vue-slider-dot-tooltip-top{top:-10px;left:50%;-webkit-transform:translate(-50%,-100%);transform:translate(-50%,-100%)}.vue-slider-dot-tooltip-bottom{bottom:-10px;left:50%;-webkit-transform:translate(-50%,100%);transform:translate(-50%,100%)}.vue-slider-dot-tooltip-left{left:-10px;top:50%;-webkit-transform:translate(-100%,-50%);transform:translate(-100%,-50%)}.vue-slider-dot-tooltip-right{right:-10px;top:50%;-webkit-transform:translate(100%,-50%);transform:translate(100%,-50%)}</style><style type="text/css">.vue-slider-marks{position:relative;width:100%;height:100%}.vue-slider-mark{position:absolute;z-index:1}.vue-slider-ltr .vue-slider-mark,.vue-slider-rtl .vue-slider-mark{width:0;height:100%;top:50%}.vue-slider-ltr .vue-slider-mark-step,.vue-slider-rtl .vue-slider-mark-step{top:0}.vue-slider-ltr .vue-slider-mark-label,.vue-slider-rtl .vue-slider-mark-label{top:100%;margin-top:10px}.vue-slider-ltr .vue-slider-mark{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.vue-slider-ltr .vue-slider-mark-step{left:0}.vue-slider-ltr .vue-slider-mark-label{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.vue-slider-rtl .vue-slider-mark{-webkit-transform:translate(50%,-50%);transform:translate(50%,-50%)}.vue-slider-rtl .vue-slider-mark-step{right:0}.vue-slider-rtl .vue-slider-mark-label{right:50%;-webkit-transform:translateX(50%);transform:translateX(50%)}.vue-slider-btt .vue-slider-mark,.vue-slider-ttb .vue-slider-mark{width:100%;height:0;left:50%}.vue-slider-btt .vue-slider-mark-step,.vue-slider-ttb .vue-slider-mark-step{left:0}.vue-slider-btt .vue-slider-mark-label,.vue-slider-ttb .vue-slider-mark-label{left:100%;margin-left:10px}.vue-slider-btt .vue-slider-mark{-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}.vue-slider-btt .vue-slider-mark-step{top:0}.vue-slider-btt .vue-slider-mark-label{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.vue-slider-ttb .vue-slider-mark{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.vue-slider-ttb .vue-slider-mark-step{bottom:0}.vue-slider-ttb .vue-slider-mark-label{bottom:50%;-webkit-transform:translateY(50%);transform:translateY(50%)}.vue-slider-mark-label,.vue-slider-mark-step{position:absolute}</style><style type="text/css">.vue-slider{position:relative;-webkit-box-sizing:content-box;box-sizing:content-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:block;-webkit-tap-highlight-color:rgba(0,0,0,0)}.vue-slider-rail{position:relative;width:100%;height:100%;-webkit-transition-property:width,height,left,right,top,bottom;transition-property:width,height,left,right,top,bottom}.vue-slider-process{position:absolute;z-index:1}</style><style>@import url("chrome-extension://adlpodnneegcnbophopdmhedicjbcgco/content/styles.css");</style></head>
+  <body cz-shortcut-listen="true" style="">
+    <div id="root"><div class="App"><div class="container" style="
+    position: relative;
+"><div class="headerWrap"><div class="headerTop"><img src="./pt_build_files/icon_menu.svg" alt=""><a href="http://localhost:5173/w/"><img src="./pt_build_files/logo.svg" alt=""></a><a href="https://reserva.be/blanz"><div class="buttonWrap ">预约</div></a></div><div class="headerBot"><div class="itemMenu"><a href="http://localhost:5173/w/concept">公司理念</a></div><div class="itemMenu"><a href="http://localhost:5173/w/studio">摄影方案</a></div><div class="itemMenu"><a href="http://localhost:5173/w/scene">场景 风格</a></div><div class="itemMenu disable-link"><a href="http://localhost:5173/w/">日本文化体验</a></div><div class="itemMenu"><a href="https://www.google.com/maps/place/%E3%80%92550-0015+%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E8%A5%BF%E5%8C%BA%E5%8D%97%E5%A0%80%E6%B1%9F%EF%BC%91%E4%B8%81%E7%9B%AE%EF%BC%99%E2%88%92%EF%BC%91+GENDAI+ORANGE+BLD/@34.671139,135.496087,19z/data=!4m6!3m5!1s0x6000e70fcf0ff00d:0xa071587cf6d00c36!8m2!3d34.6712165!4d135.4960653!16s%2Fg%2F12hmh853p?hl=ja&amp;entry=ttu">路线</a></div></div><div class="menuDetail "><div class="menuDetailTop"><div class="closeImage"><a href="http://localhost:5173/w/"><img src="./pt_build_files/logo.svg" alt=""></a><img src="./pt_build_files/close.svg" alt=""></div><div class="tableMenu"><table cellpadding="0" cellspacing="0"><tr><td><div class="content"><a href="http://localhost:5173/w/">首页</a></div></td><td><div class="content"><a href="http://localhost:5173/w/concept">公司理念</a></div></td></tr><tr><td><div class="content"><a href="http://localhost:5173/w/studio">摄影方案</a></div></td><td><div class="content"><a href="http://localhost:5173/w/scene">场景 风格</a></div></td></tr><tr><td><div class="content disable-link"><a href="http://localhost:5173/w/">日本文化体验</a></div></td><td><div class="content"><a href="https://www.google.com/maps/place/%E3%80%92550-0015+%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E8%A5%BF%E5%8C%BA%E5%8D%97%E5%A0%80%E6%B1%9F%EF%BC%91%E4%B8%81%E7%9B%AE%EF%BC%99%E2%88%92%EF%BC%91+GENDAI+ORANGE+BLD/@34.671139,135.496087,19z/data=!4m6!3m5!1s0x6000e70fcf0ff00d:0xa071587cf6d00c36!8m2!3d34.6712165!4d135.4960653!16s%2Fg%2F12hmh853p?hl=ja&amp;entry=ttu">路线</a></div></td></tr></table></div><div class="listLanguage"><div class="itemLange ">JP</div><div class="sep">/</div><div class="itemLange ">EN</div><div class="sep">/</div><div class="itemLange active">中文</div></div></div><div class="menuDetailMid"><div class="titleWrap"><div class="title">预约・咨询</div><div class="sub">为了满足注重时尚的新娘的梦想，</div><div class="sub">我们准备了丰富多样的精选服装</div></div><div class="flex" style="justify-content: space-evenly;"><div class="itemContact"><div class="nameContact">电话</div><div class="imageContact"><img class="imgMain" src="./pt_build_files/phone.svg" alt=""></div><div class="desContact"><div class="title">TEL:06-6616-9932</div><div class="sub">营业时间：10:00~19:00</div><div class="sub">※周末与节假日正常营业</div></div></div><div class="itemContact"><div class="nameContact">邮件</div><div class="imageContact"><img class="imgMain" src="./pt_build_files/menu_email.svg" alt=""></div><div class="buttonContact"><a href="http://localhost:5173/w/contact"><div class="btnContact">点击咨询</div></a></div><div class="desContact"><div class="sub">※我们也接受在线预约咨询</div></div></div></div><div class="itemContact borderTop"><div class="nameContact" style="margin: 20px auto;">社交网站</div><div class="imageContact"><a href="https://www.instagram.com/blanzshinsaibashi/"><img src="./pt_build_files/menu_insta.svg" alt=""></a><a href="https://www.youtube.com/@blanzshinsaibashi8198"><img src="./pt_build_files/menu_yt.svg" alt=""></a><a href="https://www.tiktok.com/@blanz_shinsaibashi"><img src="./pt_build_files/menu_tt.svg" alt=""></a><a href="http://localhost:5173/w/studio"><img src="./pt_build_files/menu_.png" alt=""></a></div></div></div><div class="menuDetailBot"><div class="flex"><a href="http://localhost:5173/w/company-profile" class="item">公司简介</a><a href="http://localhost:5173/w/privacy-policy" class="item">客户隐私保护政策</a></div><div>Copyright©AKI ENTERPRISE Co.,Ltd. ALL Rights Reserve</div></div></div><div class="chatDetail "><div class="headerChat"><img src="./pt_build_files/closeChat.svg" alt=""><span>チャットで質問をどうぞ</span></div><div class="contentChat"><div class="itemChat isAdmin"><img src="./pt_build_files/leftChatAdmin.svg" class="arrLeft" alt=""><div class="textChat">ご来訪ありがとうございます。<br>BLANZお問い合わせチャットです。<br>ご質問内容を選択してください。" 以下よりお選びください。 以下よりお選びください。<br></div></div><div class="itemChat optionChat"><img src="./pt_build_files/arrOptionChat.svg" alt=""><span>ご予約について</span></div><div class="itemChat optionChat"><img src="./pt_build_files/arrOptionChat.svg" alt=""><span>撮影プランについて</span></div><div class="itemChat optionChat"><img src="./pt_build_files/arrOptionChat.svg" alt=""><span>料金プランについて</span></div><div class="itemChat optionChat"><img src="./pt_build_files/arrOptionChat.svg" alt=""><span>衣装・撮影時の持ち物について</span></div><div class="itemChat optionChat"><img src="./pt_build_files/arrOptionChat.svg" alt=""><span>写真・アルバムについて</span></div><div class="itemChat optionChat"><img src="./pt_build_files/arrOptionChat.svg" alt=""><span>カメラマン・ヘアメイクについて</span></div><div class="itemChat optionChat"><img src="./pt_build_files/arrOptionChat.svg" alt=""><span>BLANZについて</span></div><div id="botChat" style="opacity: 0;">-</div></div></div><div class="menuDetailWrap hide"></div><div class="iconChat" style=""><img src="./pt_build_files/chat_cn.svg" alt=""></div></div><a class="mb reverse_btn" href="https://reserva.be/blanz" style="position: fixed;"><div>预约</div></a><div class="studio"><div class="title-page"><img src="./pt_build_files/bg-title.svg" alt=""><div class="contentTitle"><div class="title">摄影方案</div><div class="sub-title"></div></div></div><div class="text-page">BLANZ的工作室拥有为客户精心准备的的摄影道具，<br>为您拍下独一无二的婚纱照</div><div class="content bgE7"><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img1.svg" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" class="top" alt=""><div class="text">想穿日本独特的和服拍摄！</div><div class="text-main">和服一套・外景拍摄地点一个</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">158</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税173,800円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円<br>※费用会根据外景拍摄地点而变动</div></div></div><div class="list-suggest"><div class="item-suggest"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest white">拍摄1小时</div><span>一个外景拍摄地点</span></div><div class="item-suggest"><img src="./pt_build_files/kimono.svg" alt=""><div class="btn-suggest white">租和服</div><span>白無垢或色打掛一套/紋付袴一套</span></div><div class="item-suggest"><img src="./pt_build_files/king.svg" alt=""><div class="btn-suggest white">租装饰物</div></div><div class="item-suggest"><img src="./pt_build_files/makeup.svg" alt=""><div class="btn-suggest white">为新娘化妆造型・穿衣</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest white">全底片</div><span>共100张</span></div></div><div class="textbt mb">※土日祝日料金は＋22,000円申し受けます。 <br>※ロケーション撮影地によって料金が異なります。</div></div><div class="content"><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img2.svg" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" class="top" alt=""><div class="text">想在喜欢的日本名胜地拍下西装与和服的美丽照片！</div><div class="text-main">西装一套+和服一套・外景拍摄地点一个</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">238</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税261,800円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円<br>※费用会根据外景拍摄地点而变动</div></div></div><div class="list-suggest"><div class="item-suggest"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest">拍摄1小时</div><span>一个外景拍摄地点</span></div><div class="item-suggest"><img src="./pt_build_files/wedding.svg" alt=""><div class="btn-suggest">租和服</div><span>婚纱/燕尾服一套</span></div><div class="item-suggest"><img src="./pt_build_files/kimono.svg" alt=""><div class="btn-suggest">租装饰物</div><span>租和服白無垢或色打掛一套/ <br> 紋付袴一套</span></div><div class="item-suggest"><img src="./pt_build_files/king.svg" alt=""><div class="btn-suggest">为新娘化妆造型・穿衣</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/makeup.svg" alt=""><div class="btn-suggest">全底片</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest">全底片</div><span>共200张</span></div></div><div class="textbt mb">※土日祝日料金は＋22,000円申し受けます。 <br>※ロケーション撮影地によって料金が異なります。</div></div><div class="content bgE7"><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img3.svg" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" class="top" alt=""><div class="text">想穿着西装和和服在两个景点尽情拍照！</div><div class="text-main">西装一套+和服一套・外景拍摄地点两个</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">288</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税316,800円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円<br>※费用会根据外景拍摄地点而变动</div></div></div><div class="list-suggest"><div class="item-suggest"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest white">拍摄1小时</div><span>两个外景拍摄地点</span></div><div class="item-suggest"><img src="./pt_build_files/wedding.svg" alt=""><div class="btn-suggest white">租和服</div><span>婚纱/燕尾服一套</span></div><div class="item-suggest"><img src="./pt_build_files/kimono.svg" alt=""><div class="btn-suggest white">租装饰物</div><span>租和服白無垢或色打掛一套/ <br> 紋付袴一套</span></div><div class="item-suggest"><img src="./pt_build_files/king.svg" alt=""><div class="btn-suggest white">为新娘化妆造型・穿衣</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/makeup.svg" alt=""><div class="btn-suggest white">全底片</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest white">全底片</div><span>共100张</span></div></div><div class="textbt mb">※土日祝日料金は＋22,000円申し受けます。 <br>※ロケーション撮影地によって料金が異なります。</div></div><div class="content"><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img10.png" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" class="top" alt=""><div class="text">和装2着と映える２ヶ所のロケ地で充実撮影したい</div><div class="text-main">和装2着・ロケ2ヶ所</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">285</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税283,800円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円<br>※费用会根据外景拍摄地点而变动</div></div></div><div class="list-suggest"><div class="item-suggest"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest">拍摄1小时</div><span>ロケ1ヶ所</span></div><div class="item-suggest"><img src="./pt_build_files/kimono.svg" alt=""><div class="btn-suggest white">租和服</div><span>白無垢或色打掛一套/紋付袴一套</span></div><div class="item-suggest"><img src="./pt_build_files/king.svg" alt=""><div class="btn-suggest white">租装饰物</div></div><div class="item-suggest"><img src="./pt_build_files/makeup.svg" alt=""><div class="btn-suggest white">为新娘化妆造型・穿衣</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest white">全底片</div><span>共100张</span></div></div><div class="textbt mb">※土日祝日料金は＋22,000円申し受けます。 <br>※ロケーション撮影地によって料金が異なります。</div></div><div class="content bgE7"><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img11.png" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" class="top" alt=""><div class="text">洋装も和装もどちらも着たい！</div><div class="text-main">洋装1着＋和装2着・ロケ2ヶ所</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">338</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税371,800円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円<br>※费用会根据外景拍摄地点而变动</div></div></div><div class="list-suggest"><div class="item-suggest"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest white">拍摄1小时</div><span>两个外景拍摄地点</span></div><div class="item-suggest"><img src="./pt_build_files/wedding.svg" alt=""><div class="btn-suggest white">租和服</div><span>婚纱/燕尾服一套</span></div><div class="item-suggest"><img src="./pt_build_files/kimono.svg" alt=""><div class="btn-suggest white">租装饰物</div><span>租和服白無垢或色打掛一套/ <br> 紋付袴一套</span></div><div class="item-suggest"><img src="./pt_build_files/king.svg" alt=""><div class="btn-suggest white">为新娘化妆造型・穿衣</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/makeup.svg" alt=""><div class="btn-suggest white">全底片</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest white">全底片</div><span>共100张</span></div></div><div class="textbt mb">※土日祝日料金は＋22,000円申し受けます。 <br>※ロケーション撮影地によって料金が異なります。</div></div><div class="content"><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img12.png" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" class="top" alt=""><div class="text">衣裳にこだわって沢山着たい！</div><div class="text-main">洋装＋和装選び放題</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">418</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税459,800円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円<br>※费用会根据外景拍摄地点而变动</div></div></div><div class="list-suggest"><div class="item-suggest"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest white">拍摄1小时</div><span>两个外景拍摄地点</span></div><div class="item-suggest"><img src="./pt_build_files/wedding.svg" alt=""><div class="btn-suggest white">租和服</div><span>婚纱/燕尾服一套</span></div><div class="item-suggest"><img src="./pt_build_files/kimono.svg" alt=""><div class="btn-suggest white">租装饰物</div><span>租和服白無垢或色打掛一套/ <br> 紋付袴一套</span></div><div class="item-suggest"><img src="./pt_build_files/king.svg" alt=""><div class="btn-suggest white">为新娘化妆造型・穿衣</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/makeup.svg" alt=""><div class="btn-suggest white">全底片</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest white">全底片</div><span>共100张</span></div></div><div class="textbt mb">※土日祝日料金は＋22,000円申し受けます。 <br>※ロケーション撮影地によって料金が異なります。</div></div><div class="content bgE7"><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img13.png" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" class="top" alt=""><div class="text">ロケもスタジオも両方でイイトコ撮り撮影したい！</div><div class="text-main">洋装1着＋和装1着・スタジオ+ロケ1ヶ所</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">298</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税327,800円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円<br>※费用会根据外景拍摄地点而变动</div></div></div><div class="list-suggest"><div class="item-suggest"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest white">拍摄1小时</div><span>两个外景拍摄地点</span></div><div class="item-suggest"><img src="./pt_build_files/wedding.svg" alt=""><div class="btn-suggest white">租和服</div><span>婚纱/燕尾服一套</span></div><div class="item-suggest"><img src="./pt_build_files/kimono.svg" alt=""><div class="btn-suggest white">租装饰物</div><span>租和服白無垢或色打掛一套/ <br> 紋付袴一套</span></div><div class="item-suggest"><img src="./pt_build_files/king.svg" alt=""><div class="btn-suggest white">为新娘化妆造型・穿衣</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/makeup.svg" alt=""><div class="btn-suggest white">全底片</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest white">全底片</div><span>共100张</span></div></div><div class="textbt mb">※土日祝日料金は＋22,000円申し受けます。 <br>※ロケーション撮影地によって料金が異なります。</div></div><div class="content"><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img14.png" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" class="top" alt=""><div class="text">和装撮影にこだわりたい！</div><div class="text-main">和装1着・スタジオ+ロケ1ヶ所</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">318</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税349,800円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円<br>※费用会根据外景拍摄地点而变动</div></div></div><div class="list-suggest"><div class="item-suggest"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest white">拍摄1小时</div><span>两个外景拍摄地点</span></div><div class="item-suggest"><img src="./pt_build_files/wedding.svg" alt=""><div class="btn-suggest white">租和服</div><span>婚纱/燕尾服一套</span></div><div class="item-suggest"><img src="./pt_build_files/kimono.svg" alt=""><div class="btn-suggest white">租装饰物</div><span>租和服白無垢或色打掛一套/ <br> 紋付袴一套</span></div><div class="item-suggest"><img src="./pt_build_files/king.svg" alt=""><div class="btn-suggest white">为新娘化妆造型・穿衣</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/makeup.svg" alt=""><div class="btn-suggest white">全底片</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest white">全底片</div><span>共100张</span></div></div><div class="textbt mb">※土日祝日料金は＋22,000円申し受けます。 <br>※ロケーション撮影地によって料金が異なります。</div></div><div class="content bgE7"><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img15.png" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" class="top" alt=""><div class="text">和洋衣装に２ロケ地で贅沢撮影！<br>一生一度の贅沢体験にしたい！</div><div class="text-main">洋装1着+和装1着・スタジオ+ロケ2ヶ所</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">398</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税437,800円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円<br>※费用会根据外景拍摄地点而变动</div></div></div><div class="list-suggest"><div class="item-suggest"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest white">拍摄1小时</div><span>两个外景拍摄地点</span></div><div class="item-suggest"><img src="./pt_build_files/wedding.svg" alt=""><div class="btn-suggest white">租和服</div><span>婚纱/燕尾服一套</span></div><div class="item-suggest"><img src="./pt_build_files/kimono.svg" alt=""><div class="btn-suggest white">租装饰物</div><span>租和服白無垢或色打掛一套/ <br> 紋付袴一套</span></div><div class="item-suggest"><img src="./pt_build_files/king.svg" alt=""><div class="btn-suggest white">为新娘化妆造型・穿衣</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/makeup.svg" alt=""><div class="btn-suggest white">全底片</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest white">全底片</div><span>共100张</span></div></div><div class="textbt mb">※土日祝日料金は＋22,000円申し受けます。 <br>※ロケーション撮影地によって料金が異なります。</div></div><div class="content"><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img16.png" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" class="top" alt=""><div class="text">洋装で別ロケも撮りたい！</div><div class="text-main">洋装・ロケ地1ヶ所追加</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">100</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税110,000円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円<br>※费用会根据外景拍摄地点而变动</div></div></div><div class="list-suggest"><div class="item-suggest"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest white">拍摄1小时</div><span>两个外景拍摄地点</span></div><div class="item-suggest"><img src="./pt_build_files/wedding.svg" alt=""><div class="btn-suggest white">租和服</div><span>婚纱/燕尾服一套</span></div><div class="item-suggest"><img src="./pt_build_files/kimono.svg" alt=""><div class="btn-suggest white">租装饰物</div><span>租和服白無垢或色打掛一套/ <br> 紋付袴一套</span></div><div class="item-suggest"><img src="./pt_build_files/king.svg" alt=""><div class="btn-suggest white">为新娘化妆造型・穿衣</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/makeup.svg" alt=""><div class="btn-suggest white">全底片</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest white">全底片</div><span>共100张</span></div></div><div class="textbt mb">※土日祝日料金は＋22,000円申し受けます。 <br>※ロケーション撮影地によって料金が異なります。</div></div><div class="content bgE7"><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img18.png" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" alt="" class="top"><div class="text">洋装で別ロケも撮りたい！</div><div class="text-main">洋装・ロケ地1ヶ所追加</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">100</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税110,000円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円<br>※费用会根据外景拍摄地点而变动</div></div></div><div class="list-suggest"><div class="item-suggest"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest white">拍摄1小时</div><span>两个外景拍摄地点</span></div><div class="item-suggest"><img src="./pt_build_files/wedding.svg" alt=""><div class="btn-suggest white">租和服</div><span>婚纱/燕尾服一套</span></div><div class="item-suggest"><img src="./pt_build_files/kimono.svg" alt=""><div class="btn-suggest white">租装饰物</div><span>租和服白無垢或色打掛一套/ <br> 紋付袴一套</span></div><div class="item-suggest"><img src="./pt_build_files/king.svg" alt=""><div class="btn-suggest white">为新娘化妆造型・穿衣</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/makeup.svg" alt=""><div class="btn-suggest white">全底片</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest white">全底片</div><span>共100张</span></div></div></div><div class="content"><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img19.png" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" alt="" class="top"><div class="text">時間有効に！衣裳はそのまま、ロケ地贅沢に撮影したい！</div><div class="text-main">ロケ地のみ1ヶ所追加</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">50</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税55,000円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円<br>※费用会根据外景拍摄地点而变动</div></div></div><div class="list-suggest"><div class="item-suggest noBoder"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest">拍摄1小时</div><span>一个外景拍摄地点</span></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest">全底片</div><span>共200张</span></div></div><div class="textbt mb">※土日祝日料金は＋22,000円申し受けます。 <br>※ロケーション撮影地によって料金が異なります。</div></div><div class="content bgGradient"><div class="describe-page"><img src="./pt_build_files/top-bg.svg" alt=""><div class="text-describe"><img src="./pt_build_files/yumi.svg" alt=""></div><img src="./pt_build_files/bottom-bg.svg" alt=""><p style=""> </p><p style="width: 70%; margin: 0px auto;" class="font14">被世界赞美的独一无二的日本人连衣裙专业设计师YUMI KATSURA</p><p style=""> </p><p class="font18" style="width: 70%; margin: 0px auto;">拍下动人而美丽的自己，珍藏一生。让憧憬和梦想中的自己成真。</p></div><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img8.png" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" alt="" class="top"><div class="text">穿着让世界着迷的婚纱体验一生一次的感动</div><div class="text-main">Yumi Katsura 高级婚纱特别摄影方案</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">300</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税330,000円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円</div></div></div><div class="list-suggest"><div class="item-suggest"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest white">拍摄1小时</div><span>一个外景拍摄地点</span></div><div class="item-suggest"><img src="./pt_build_files/wedding.svg" alt=""><div class="btn-suggest white">租和服</div><span>婚纱/燕尾服一套</span></div><div class="item-suggest"><img src="./pt_build_files/king.svg" alt=""><div class="btn-suggest white">租装饰物</div></div><div class="item-suggest"><img src="./pt_build_files/makeup.svg" alt=""><div class="btn-suggest white">为新娘化妆造型・穿衣</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest white">全底片</div><span>共100张</span></div></div><div class="textbt mb">※土日祝日料金は＋22,000円申し受けます。</div></div><div class="content"><div class="detail-content flex"><div class="img"><img src="./pt_build_files/img9.png" alt=""></div><div class="describe"><img src="./pt_build_files/hem-top-retouch.svg" class="top" alt=""><div class="text">想拍美丽，优雅的和服照</div><div class="text-main">Yumi Katsura 高级婚纱特别摄影方案</div><img src="./pt_build_files/hem-bottom-retouch.svg" class="bottom" alt=""><div class="button-price"><span class="text1">400</span><span class="text2">,000</span><span class="text3">円 &nbsp; (含税440,000円)</span></div><div class="introduce pc">※周末与节假日的摄影费用需要加22，000円</div></div></div><div class="list-suggest"><div class="item-suggest"><img src="./pt_build_files/camera.svg" alt=""><div class="btn-suggest">拍摄1小时</div><span>一个外景拍摄地点</span></div><div class="item-suggest"><img src="./pt_build_files/kimono.svg" alt=""><div class="btn-suggest">租装饰物</div><span>租和服白無垢或色打掛一套/ <br> 紋付袴一套</span></div><div class="item-suggest"><img src="./pt_build_files/king.svg" alt=""><div class="btn-suggest">租装饰物</div></div><div class="item-suggest"><img src="./pt_build_files/makeup.svg" alt=""><div class="btn-suggest">为新娘化妆造型・穿衣</div></div><div class="item-suggest noBoder"><img src="./pt_build_files/picture.svg" alt=""><div class="btn-suggest">全底片</div><span>共100张</span></div></div><div class="textbt mb">※土日祝日料金は＋22,000円申し受けます。</div></div><div class="content"><div class="describe-page"><img src="./pt_build_files/top-bg.svg" alt=""><div class="text-describe">その他プラン多数ご用意しておりますので<br>お気軽にお問い合わせください</div><img src="./pt_build_files/bottom-bg.svg" alt=""></div></div><div class="youtubeWrap"><div class="itemYoutube"><div class="titleYoutube font18">在线婚礼</div><div class="desYoutube font12">在线婚礼</div><iframe src="./pt_build_files/ZaNLTJxl9vc.html" title="Web結婚式【オンライン結婚式】" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe><div class="font14">比以前更轻松地对居住遥远的亲人、朋友表达感谢之情！我们为了让您这样的愿望变成现实，BLANZ也接受在线婚礼的举办约订。请随时联系商量 <br> <br> <br></div></div><div class="itemYoutube noBoder"><div class="titleYoutube font18">创造纪录片</div><div class="desYoutube font12">在线婚礼</div><iframe src="./pt_build_files/DmUkJtlbc9o.html" title="Web結婚式【オンライン結婚式】" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe><div class="font14">要不要在摄影的同时，把两个人的美好时光做成纪录片留下来？经验丰富的BLANZ职员会为您把当天的美好记忆做成一个短片电影一般的作品。</div></div></div><div class="allWrap"><div class="title font18">大阪最大级别！多彩多样的场景，千姿百态的风格？</div><img src="./pt_build_files/all.svg" alt=""><div class="des font14">BLANZ 摄影棚的布景经过特别设计，可展现新人作为 "珍宝 "的魅力。在我们的婚礼展销会和巡回展上，看看您最喜欢的场景吧。</div></div></div><div class="BeforeFooterWrap"><div class="cardsContact"><div class="itemCardContact"><div class="cardWrapContact "><div class="thumbnail"><img src="./pt_build_files/card2.png" alt="" class="imgThumbnail"></div><div class="content"><div class="button1">服装</div><div class="contentCard"><div class="descriptionCard">为了满足注重时尚的新娘的梦想，我们准备了丰富多样的精选服装</div><a href="http://localhost:5173/w/dress"><div class="buttonCard">了解更多</div></a></div></div></div></div><div class="itemCardContact"><div class="cardWrapContact "><div class="thumbnail"><img src="./pt_build_files/card1.png" alt="" class="imgThumbnail"></div><div class="content"><div class="button1">摄制组</div><div class="contentCard"><div class="descriptionCard">我们有多位专业婚纱照摄影师、造型师、化妆师和制作人。</div><a href="http://localhost:5173/w/produce-crew"><div class="buttonCard">了解更多</div></a></div></div></div></div><div class="itemCardContact"><div class="cardWrapContact "><div class="thumbnail"><img src="./pt_build_files/card3.png" alt="" class="imgThumbnail"></div><div class="content"><div class="button1">修图和相册</div><div class="contentCard"><div class="descriptionCard">高品质的相册，让您在未来的岁月里回味无穷。我们也会进行美容修图，更好的展示两个人的魅力</div><a href="http://localhost:5173/w/retouch-album"><div class="buttonCard">了解更多</div></a></div></div></div></div><div class="itemCardContact"><div class="cardWrapContact "><div class="thumbnail"><img src="./pt_build_files/card4.svg" alt="" class="imgThumbnail"></div><div class="content"><div class="button1">风格</div><div class="contentCard"><div class="descriptionCard">婚纱照造型・摄影空间和背景的设计又富有盛名的设计团担当。为您拍摄理想的婚纱照。</div><a href="http://localhost:5173/w/concept"><div class="buttonCard">了解更多</div></a></div></div></div></div></div><div class="listBtnBF"><a href="http://localhost:5173/w/Report"><img src="./pt_build_files/bfFooter1.svg" alt=""><div class="content"><div>客户反馈</div><div>满意，喜悦之声不断。</div><div>查看客户评价</div></div></a><a href="http://localhost:5173/w/FAQ"><img src="./pt_build_files/bfFooter2.svg" alt=""><div class="content"><div>常见问题</div><div>回答客户的常见提问</div><div></div></div></a></div></div><div class="contactWrap"><div class="contactContent"><div class="titleWrap"><div class="title">预约・咨询</div><div class="sub">为了满足注重时尚的新娘的梦想，</div><div class="sub">我们准备了丰富多样的精选服装</div></div><div class="contactTop"><div class="itemContact"><div class="nameContact">电话</div><div class="imageContact"><img class="imgMain" src="./pt_build_files/phone.svg" alt=""></div><div class="desContact"><div class="title">TEL:06-6616-9932</div><div class="sub">営業時間:10:00~19:00</div><div class="sub">星期二休息日 ※周末与节假日正常营业</div></div></div><div class="itemContact"><div class="nameContact">邮件</div><div class="imageContact"><img class="imgMain" src="./pt_build_files/menu_email.svg" alt=""></div><div class="buttonContact"><a href="http://localhost:5173/w/contact"><div class="btnContact">点击咨询</div></a></div><div class="desContact"><div class="sub">※我们也接受在线预约咨询</div></div></div></div><div class="itemContact"><div class="nameContact">社交网站</div><div class="imageContact"><a href="https://www.instagram.com/blanzshinsaibashi/"><img src="./pt_build_files/menu_insta.svg" alt=""></a><a href="https://www.youtube.com/@blanzshinsaibashi8198"><img src="./pt_build_files/menu_yt.svg" alt=""></a><a href="https://www.tiktok.com/@blanz_shinsaibashi"><img src="./pt_build_files/menu_tt.svg" alt=""></a><a href="http://localhost:5173/w/studio"><img src="./pt_build_files/menu_.png" alt=""></a></div></div></div></div><div class="footerWrap"><div class="listMenuBot"><div class="itemMenuBot"><a href="http://localhost:5173/w/company-profile">公司简介</a></div><div class="itemMenuBot"><a href="http://localhost:5173/w/privacy-policy">客户隐私保护政策</a></div></div><div class="textCopyRight">Copyright©AKI ENTERPRISE Co.,Ltd. ALL Rights Reserve</div></div></div></div></div>
+    <script type="module" src="./pt_build_files/main.jsx"></script>
+  
+
+</body><div class="troywell-avia"><template shadowrootmode="open">
+        <style>@import url("chrome-extension://adlpodnneegcnbophopdmhedicjbcgco/content/styles.css");</style>
+        <div id="troywell-avia" data-v-app=""><div class="app"><div data-v-138a3c39=""><!----></div></div></div></template></div><div class="troywell-caa"><template shadowrootmode="open">
+    <style>
+    @import url("chrome-extension://adlpodnneegcnbophopdmhedicjbcgco/content/styles.css");
+    @import url("chrome-extension://adlpodnneegcnbophopdmhedicjbcgco/caa/styles.css");
+    </style>
+    <div id="troywell-caa" data-v-app=""><div class="content-app" data-v-9eaabcdc=""><!----></div></div></template></div></html>
